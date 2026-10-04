@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Josephine Jesuraj | Data Science Portfolio</title>
 
     <style>
         * {
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -24,55 +18,81 @@
             line-height: 1.6;
         }
 
-        nav {
+        header {
             background-color: #1f2937;
-            padding: 15px 30px;
+            color: white;
+            text-align: center;
+            padding: 35px 20px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 38px;
+        }
+
+        header p {
+            margin: 0;
+            color: #d1d5db;
+        }
+
+        .tabs {
+            background-color: #111827;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 10px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
+        .tab-button {
+            background: transparent;
+            border: none;
             color: white;
-            text-decoration: none;
+            padding: 12px 22px;
+            font-size: 16px;
             font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
         }
 
-        nav a:hover {
-            color: #60a5fa;
+        .tab-button:hover {
+            background-color: #374151;
+        }
+
+        .tab-button.active {
+            background-color: #2563eb;
+        }
+
+        .tab-content {
+            display: none;
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .tab-content.active {
+            display: block;
         }
 
         .hero {
-            background-color: #e8eef5;
             text-align: center;
-            padding: 80px 20px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            color: #1f2937;
+            background-color: #e8eef5;
+            padding: 55px 25px;
+            border-radius: 12px;
         }
 
         .hero h2 {
-            font-size: 22px;
-            font-weight: normal;
-            color: #4b5563;
-            margin-bottom: 25px;
+            font-size: 32px;
+            color: #1f2937;
+            margin-top: 0;
         }
 
         .hero p {
-            max-width: 700px;
-            margin: 0 auto 30px;
+            max-width: 750px;
+            margin: 0 auto 25px;
             font-size: 18px;
         }
 
@@ -80,40 +100,37 @@
             display: inline-block;
             background-color: #2563eb;
             color: white;
-            padding: 12px 24px;
+            padding: 12px 22px;
             text-decoration: none;
             border-radius: 6px;
             margin: 5px;
+            border: none;
+            cursor: pointer;
         }
 
         .button:hover {
             background-color: #1d4ed8;
         }
 
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        section h2 {
+        .section-title {
             text-align: center;
             font-size: 32px;
             color: #1f2937;
             margin-bottom: 35px;
         }
 
-        .about-content {
+        .card {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .skill {
@@ -125,51 +142,45 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
         }
 
         .project-card {
             background-color: white;
-            padding: 25px;
+            padding: 24px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
         }
 
         .project-card h3 {
-            color: #1f2937;
             margin-top: 0;
-        }
-
-        .project-card p {
-            margin-bottom: 12px;
+            color: #1f2937;
+            font-size: 21px;
         }
 
         .project-link {
             display: inline-block;
-            margin-top: 10px;
             color: #2563eb;
             text-decoration: none;
             font-weight: bold;
+            margin-top: 8px;
         }
 
         .project-link:hover {
             text-decoration: underline;
         }
 
-        .contact-box {
-            background-color: white;
+        .contact {
             text-align: center;
-            padding: 35px;
-            border-radius: 10px;
         }
 
-        .contact-box a {
+        .contact a {
             color: #2563eb;
             text-decoration: none;
         }
 
-        .contact-box a:hover {
+        .contact a:hover {
             text-decoration: underline;
         }
 
@@ -177,400 +188,256 @@
             background-color: #1f2937;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 18px;
+            margin-top: 40px;
         }
 
         @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
+            header h1 {
+                font-size: 30px;
             }
 
-            .hero h1 {
-                font-size: 32px;
+            .tab-button {
+                width: 45%;
             }
         }
     </style>
-
 </head>
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<header>
+    <h1>Josephine Jesuraj</h1>
+    <p>Data Science | Data Analytics | Technology</p>
+</header>
 
-    <header class="hero" id="home">
-        <h1>Josephine Jesuraj</h1>
-        <h2>Data Science | Data Analytics | Technology</h2>
+<div class="tabs">
+    <button class="tab-button active" onclick="openTab('home', this)">Home</button>
+    <button class="tab-button" onclick="openTab('about', this)">About</button>
+    <button class="tab-button" onclick="openTab('projects', this)">Projects</button>
+    <button class="tab-button" onclick="openTab('contact', this)">Contact</button>
+</div>
+
+<section id="home" class="tab-content active">
+    <div class="hero">
+        <h2>Welcome to My Portfolio</h2>
         <p>
-            Welcome to my professional portfolio. This portfolio highlights
-            my academic projects, technical skills, and experience applying
-            data science and analytical techniques to real-world problems.
+            This portfolio highlights selected academic projects, technical skills,
+            and experience applying data science and analytical techniques to
+            real-world problems.
         </p>
 
-        <a href="#projects" class="button">View My Projects</a>
-        <a href="#about" class="button">About Me</a>
-    </header>
+        <button class="button" onclick="openTabByName('projects')">View Projects</button>
+        <button class="button" onclick="openTabByName('about')">About Me</button>
+    </div>
+</section>
 
-    <section id="about">
-        <h2>About Me</h2>
+<section id="about" class="tab-content">
+    <h2 class="section-title">About Me</h2>
 
-        <div class="about-content">
-            <p>
-                I am an information technology professional with experience
-                working with technology, data, and business systems. I am
-                currently expanding my knowledge and technical skills through
-                graduate studies in Data Science at Bellevue University.
-            </p>
+    <div class="card">
+        <p>
+            I am an information technology professional with experience working
+            with technology, data, and business systems. I am currently expanding
+            my knowledge and technical skills through graduate studies in Data Science
+            at Bellevue University.
+        </p>
 
-            <p>
-                Through my coursework and projects, I am developing hands-on
-                experience in areas such as data analysis, data visualization,
-                machine learning, predictive modeling, statistical analysis,
-                and artificial intelligence.
-            </p>
+        <p>
+            Through my coursework and projects, I am developing hands-on experience
+            in data analysis, data visualization, machine learning, predictive modeling,
+            statistical analysis, and artificial intelligence.
+        </p>
 
-            <p>
-                This portfolio presents selected academic and technical
-                projects that demonstrate my ability to analyze data,
-                identify patterns, develop models, and communicate meaningful
-                insights.
-            </p>
+        <p>
+            This portfolio presents selected academic and technical projects that
+            demonstrate my ability to analyze data, identify patterns, develop models,
+            and communicate meaningful insights.
+        </p>
 
-            <p>
-                My goal is to continue developing my data science and
-                analytical skills and apply them to real-world business
-                challenges.
-            </p>
+        <p>
+            My goal is to continue developing my data science and analytical skills
+            and apply them to real-world business challenges.
+        </p>
 
-            <h3>Skills & Technologies</h3>
+        <h3>Skills & Technologies</h3>
 
-            <div class="skills">
-                <span class="skill">Python</span>
-                <span class="skill">SQL</span>
-                <span class="skill">Pandas</span>
-                <span class="skill">NumPy</span>
-                <span class="skill">Scikit-learn</span>
-                <span class="skill">Machine Learning</span>
-                <span class="skill">Data Analysis</span>
-                <span class="skill">Data Visualization</span>
-                <span class="skill">Jupyter Notebook</span>
-                <span class="skill">GitHub</span>
-            </div>
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">NumPy</span>
+            <span class="skill">Scikit-learn</span>
+            <span class="skill">Tableau</span>
+            <span class="skill">R</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Data Visualization</span>
+            <span class="skill">Generative AI</span>
+            <span class="skill">Hugging Face</span>
+            <span class="skill">Jupyter Notebook</span>
+            <span class="skill">GitHub</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+<section id="projects" class="tab-content">
+    <h2 class="section-title">Projects</h2>
 
-        <div class="projects-grid">
+    <p style="text-align:center; max-width:850px; margin:0 auto 35px;">
+        Selected projects representing data science, analytics, visualization,
+        machine learning, forecasting, recommendation systems, and generative AI.
+    </p>
 
-            <div class="project-card">
-                <h3>Project 1: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 2: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 3: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 4: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 5: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 6: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 7: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 8: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 9: Project Title</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project description placeholder.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    Tools placeholder.
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    Skills placeholder.
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    Outcome placeholder.
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project 10: TBD</h3>
-
-                <p>
-                    <strong>Project Overview:</strong><br>
-                    Project will be added later.
-                </p>
-
-                <p>
-                    <strong>Tools & Technologies:</strong><br>
-                    TBD
-                </p>
-
-                <p>
-                    <strong>Key Skills:</strong><br>
-                    TBD
-                </p>
-
-                <p>
-                    <strong>Outcome:</strong><br>
-                    TBD
-                </p>
-
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
+    <div class="projects-grid">
+        
+        <div class="project-card">
+            <h3>1. Superstore Sales and Business Performance Analysis</h3>
+            <p><strong>Project Overview:</strong><br>Analyzes Superstore sales data to identify business performance patterns through data cleaning, exploratory analysis, visualization, and data storytelling.</p>
+            <p><strong>Primary Skills:</strong><br>Python, pandas, data cleaning, exploratory data analysis, visualization, data storytelling</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
         </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-
-        <div class="contact-box">
-            <p>
-                I welcome opportunities to connect and discuss
-                data science, analytics, technology, and professional
-                opportunities.
-            </p>
-
-            <p>
-                <strong>Email:</strong><br>
-                <a href="mailto:jjesuraj@my365.bellevue.edu">
-                    jjesuraj@my365.bellevue.edu
-                </a>
-            </p>
-
-            <p>
-                <strong>GitHub:</strong><br>
-                <a href="#" target="_blank">
-                    GitHub Profile
-                </a>
-            </p>
-
-            <p>
-                <strong>LinkedIn:</strong><br>
-                <a href="#" target="_blank">
-                    LinkedIn Profile
-                </a>
-            </p>
+    
+        <div class="project-card">
+            <h3>2. ALS Patient Clustering Analysis</h3>
+            <p><strong>Project Overview:</strong><br>Explores ALS patient data using clustering techniques to identify similarities and natural groupings without predefined outcome categories.</p>
+            <p><strong>Primary Skills:</strong><br>Python, data preprocessing, clustering, unsupervised machine learning, model evaluation</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
         </div>
-    </section>
+    
+        <div class="project-card">
+            <h3>3. U.S. Retail Sales Forecasting</h3>
+            <p><strong>Project Overview:</strong><br>Uses historical U.S. retail sales data to examine trends over time and apply time-series techniques to forecast future sales activity.</p>
+            <p><strong>Primary Skills:</strong><br>Python, pandas, time-series analysis, forecasting, trend analysis, visualization</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+        <div class="project-card">
+            <h3>4. Movie Recommendation and Analytics Using MovieLens</h3>
+            <p><strong>Project Overview:</strong><br>Analyzes movie and user-rating data from MovieLens to explore viewing preferences and how rating information can support personalized recommendations.</p>
+            <p><strong>Primary Skills:</strong><br>Python, pandas, recommendation systems, exploratory analysis, ratings analysis</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+        <div class="project-card">
+            <h3>5. Netflix Top 10 Content Analysis</h3>
+            <p><strong>Project Overview:</strong><br>Analyzes Netflix viewing information to explore popular content, movies versus television programs, viewing trends, geographic patterns, and long-running titles.</p>
+            <p><strong>Primary Skills:</strong><br>Python, pandas, data visualization, exploratory analysis, trend analysis, data storytelling</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+        <div class="project-card">
+            <h3>6. Childcare Cost and Affordability Analysis</h3>
+            <p><strong>Project Overview:</strong><br>Examines childcare prices and affordability using the National Database of Childcare Prices and communicates findings through Python, Tableau, and visual storytelling.</p>
+            <p><strong>Primary Skills:</strong><br>Python, Tableau, data visualization, dashboarding, socioeconomic analysis, data storytelling</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+        <div class="project-card">
+            <h3>7. TSA Passenger Complaints Analysis</h3>
+            <p><strong>Project Overview:</strong><br>Analyzes TSA passenger complaints across airports and complaint categories and uses Tableau to identify and communicate recurring patterns.</p>
+            <p><strong>Primary Skills:</strong><br>Tableau, Excel, dashboard development, categorical analysis, transportation analytics</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+        <div class="project-card">
+            <h3>8. Kia and Hyundai Vehicle Theft Analysis</h3>
+            <p><strong>Project Overview:</strong><br>Examines Kia and Hyundai vehicle theft data to identify patterns and demonstrate the use of data analysis and visualization for a public-safety topic.</p>
+            <p><strong>Primary Skills:</strong><br>R, R Markdown, data preparation, exploratory analysis, visualization</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+        <div class="project-card">
+            <h3>9. AI Personalized Fitness Coach Using GPT-2 and LoRA</h3>
+            <p><strong>Project Overview:</strong><br>Develops an AI-based personalized fitness coach using GPT-2 and LoRA, including model training, evaluation, inference, application development, and personalized plan generation.</p>
+            <p><strong>Primary Skills:</strong><br>Python, Hugging Face, GPT-2, LoRA, generative AI, model fine-tuning, model evaluation</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+        <div class="project-card">
+            <h3>10. Invoice Information Extraction Using Generative AI</h3>
+            <p><strong>Project Overview:</strong><br>Uses generative AI to process invoice content and transform extracted information into structured JSON output, demonstrating an applied document-processing workflow.</p>
+            <p><strong>Primary Skills:</strong><br>Python, generative AI, document processing, information extraction, prompt engineering, JSON</p>
+            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 Josephine Jesuraj | Data Science Portfolio</p>
-    </footer>
+<section id="contact" class="tab-content">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="card contact">
+        <p>
+            I welcome opportunities to connect and discuss data science,
+            analytics, technology, and professional opportunities.
+        </p>
+
+        <p>
+            <strong>Email</strong><br>
+            <a href="mailto:jjesuraj@my365.bellevue.edu">
+                jjesuraj@my365.bellevue.edu
+            </a>
+        </p>
+
+        <p>
+            <strong>GitHub</strong><br>
+            <a href="#" target="_blank">GitHub Profile Placeholder</a>
+        </p>
+
+        <p>
+            <strong>LinkedIn</strong><br>
+            <a href="#" target="_blank">LinkedIn Profile Placeholder</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Josephine Jesuraj | Data Science Portfolio
+</footer>
+
+<script>
+    function openTab(tabName, button) {
+        const contents = document.querySelectorAll('.tab-content');
+        const buttons = document.querySelectorAll('.tab-button');
+
+        contents.forEach(content => content.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(tabName).classList.add('active');
+        button.classList.add('active');
+
+        history.replaceState(null, '', '#' + tabName);
+        window.scrollTo(0, 0);
+    }
+
+    function openTabByName(tabName) {
+        const buttons = document.querySelectorAll('.tab-button');
+
+        buttons.forEach(button => {
+            if (button.textContent.toLowerCase() === tabName.toLowerCase()) {
+                openTab(tabName, button);
+            }
+        });
+    }
+
+    window.addEventListener('load', function() {
+        const tabName = window.location.hash.replace('#', '');
+
+        if (tabName && document.getElementById(tabName)) {
+            openTabByName(tabName);
+        }
+    });
+</script>
 
 </body>
 </html>
