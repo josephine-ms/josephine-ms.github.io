@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josephine Jesuraj | Data Science Portfolio</title>
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
+        * { box-sizing: border-box; }
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -17,24 +13,14 @@
             color: #333;
             line-height: 1.6;
         }
-
         header {
             background-color: #1f2937;
             color: white;
             text-align: center;
             padding: 35px 20px 20px;
         }
-
-        header h1 {
-            margin: 0 0 8px;
-            font-size: 38px;
-        }
-
-        header p {
-            margin: 0;
-            color: #d1d5db;
-        }
-
+        header h1 { margin: 0 0 8px; font-size: 38px; }
+        header p { margin: 0; color: #d1d5db; }
         .tabs {
             background-color: #111827;
             display: flex;
@@ -46,7 +32,6 @@
             top: 0;
             z-index: 1000;
         }
-
         .tab-button {
             background: transparent;
             border: none;
@@ -57,45 +42,23 @@
             cursor: pointer;
             border-radius: 6px;
         }
-
-        .tab-button:hover {
-            background-color: #374151;
-        }
-
-        .tab-button.active {
-            background-color: #2563eb;
-        }
-
+        .tab-button:hover { background-color: #374151; }
+        .tab-button.active { background-color: #2563eb; }
         .tab-content {
             display: none;
             max-width: 1100px;
             margin: auto;
             padding: 55px 20px;
         }
-
-        .tab-content.active {
-            display: block;
-        }
-
+        .tab-content.active { display: block; }
         .hero {
             text-align: center;
             background-color: #e8eef5;
             padding: 55px 25px;
             border-radius: 12px;
         }
-
-        .hero h2 {
-            font-size: 32px;
-            color: #1f2937;
-            margin-top: 0;
-        }
-
-        .hero p {
-            max-width: 750px;
-            margin: 0 auto 25px;
-            font-size: 18px;
-        }
-
+        .hero h2 { font-size: 32px; color: #1f2937; margin-top: 0; }
+        .hero p { max-width: 750px; margin: 0 auto 25px; font-size: 18px; }
         .button {
             display: inline-block;
             background-color: #2563eb;
@@ -107,58 +70,46 @@
             border: none;
             cursor: pointer;
         }
-
-        .button:hover {
-            background-color: #1d4ed8;
-        }
-
         .section-title {
             text-align: center;
             font-size: 32px;
             color: #1f2937;
             margin-bottom: 35px;
         }
-
         .card {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
         }
-
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 20px;
         }
-
         .skill {
             background-color: #e5e7eb;
             padding: 8px 14px;
             border-radius: 20px;
             font-size: 14px;
         }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
         }
-
         .project-card {
             background-color: white;
             padding: 24px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
         }
-
         .project-card h3 {
             margin-top: 0;
             color: #1f2937;
             font-size: 21px;
         }
-
         .project-link {
             display: inline-block;
             color: #2563eb;
@@ -166,24 +117,8 @@
             font-weight: bold;
             margin-top: 8px;
         }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
+        .contact { text-align: center; }
+        .contact a { color: #2563eb; text-decoration: none; }
         footer {
             background-color: #1f2937;
             color: white;
@@ -191,19 +126,12 @@
             padding: 18px;
             margin-top: 40px;
         }
-
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 30px;
-            }
-
-            .tab-button {
-                width: 45%;
-            }
+            header h1 { font-size: 30px; }
+            .tab-button { width: 45%; }
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -223,10 +151,8 @@
         <h2>Welcome to My Portfolio</h2>
         <p>
             This portfolio highlights selected academic projects, technical skills,
-            and experience applying data science and analytical techniques to
-            real-world problems.
+            and experience applying data science and analytical techniques to real-world problems.
         </p>
-
         <button class="button" onclick="openTabByName('projects')">View Projects</button>
         <button class="button" onclick="openTabByName('about')">About Me</button>
     </div>
@@ -234,34 +160,25 @@
 
 <section id="about" class="tab-content">
     <h2 class="section-title">About Me</h2>
-
     <div class="card">
         <p>
-            I am an information technology professional with experience working
-            with technology, data, and business systems. I am currently expanding
-            my knowledge and technical skills through graduate studies in Data Science
-            at Bellevue University.
+            I am an information technology professional with experience working with technology,
+            data, and business systems. I am currently expanding my knowledge and technical skills
+            through graduate studies in Data Science at Bellevue University.
         </p>
-
         <p>
-            Through my coursework and projects, I am developing hands-on experience
-            in data analysis, data visualization, machine learning, predictive modeling,
-            statistical analysis, and artificial intelligence.
+            Through my coursework and projects, I am developing hands-on experience in data analysis,
+            data visualization, machine learning, predictive modeling, statistical analysis, and artificial intelligence.
         </p>
-
         <p>
-            This portfolio presents selected academic and technical projects that
-            demonstrate my ability to analyze data, identify patterns, develop models,
-            and communicate meaningful insights.
+            This portfolio presents selected academic and technical projects that demonstrate my ability
+            to analyze data, identify patterns, develop models, and communicate meaningful insights.
         </p>
-
         <p>
-            My goal is to continue developing my data science and analytical skills
-            and apply them to real-world business challenges.
+            My goal is to continue developing my data science and analytical skills and apply them
+            to real-world business challenges.
         </p>
-
         <h3>Skills & Technologies</h3>
-
         <div class="skills">
             <span class="skill">Python</span>
             <span class="skill">SQL</span>
@@ -273,7 +190,6 @@
             <span class="skill">Machine Learning</span>
             <span class="skill">Data Visualization</span>
             <span class="skill">Generative AI</span>
-            <span class="skill">Hugging Face</span>
             <span class="skill">Jupyter Notebook</span>
             <span class="skill">GitHub</span>
         </div>
@@ -282,12 +198,10 @@
 
 <section id="projects" class="tab-content">
     <h2 class="section-title">Projects</h2>
-
     <p style="text-align:center; max-width:850px; margin:0 auto 35px;">
         Selected projects representing data science, analytics, visualization,
         machine learning, forecasting, recommendation systems, and generative AI.
     </p>
-
     <div class="projects-grid">
         
         <div class="project-card">
@@ -355,19 +269,19 @@
         </div>
     
         <div class="project-card">
-            <h3>9. AI Personalized Fitness Coach Using GPT-2 and LoRA</h3>
-            <p><strong>Project Overview:</strong><br>Develops an AI-based personalized fitness coach using GPT-2 and LoRA, including model training, evaluation, inference, application development, and personalized plan generation.</p>
-            <p><strong>Primary Skills:</strong><br>Python, Hugging Face, GPT-2, LoRA, generative AI, model fine-tuning, model evaluation</p>
+            <h3>9. Telecom Customer Churn Prediction</h3>
+            <p><strong>Project Overview:</strong><br>Analyzes telecom customer data to identify factors associated with customer churn and applies machine learning models to predict customers who may be at risk of leaving.</p>
+            <p><strong>Primary Skills:</strong><br>Python, pandas, data preprocessing, exploratory data analysis, logistic regression, random forest, XGBoost, model evaluation, ethical analysis</p>
             <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
             <a href="#" class="project-link">View Project</a>
         </div>
     
         <div class="project-card">
-            <h3>10. Invoice Information Extraction Using Generative AI</h3>
-            <p><strong>Project Overview:</strong><br>Uses generative AI to process invoice content and transform extracted information into structured JSON output, demonstrating an applied document-processing workflow.</p>
-            <p><strong>Primary Skills:</strong><br>Python, generative AI, document processing, information extraction, prompt engineering, JSON</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <h3>10. Current-Term Project – To Be Updated</h3>
+            <p><strong>Project Overview:</strong><br>Placeholder for an additional project that will be completed during the current term and added to the final portfolio.</p>
+            <p><strong>Primary Skills:</strong><br>To be updated after project completion</p>
+            <p><strong>Project Repository:</strong><br>To be updated after project completion</p>
+            <span class="project-link">To Be Updated</span>
         </div>
     
     </div>
@@ -375,55 +289,32 @@
 
 <section id="contact" class="tab-content">
     <h2 class="section-title">Contact</h2>
-
     <div class="card contact">
         <p>
             I welcome opportunities to connect and discuss data science,
             analytics, technology, and professional opportunities.
         </p>
-
-        <p>
-            <strong>Email</strong><br>
-            <a href="mailto:jjesuraj@my365.bellevue.edu">
-                jjesuraj@my365.bellevue.edu
-            </a>
-        </p>
-
-        <p>
-            <strong>GitHub</strong><br>
-            <a href="#" target="_blank">GitHub Profile Placeholder</a>
-        </p>
-
-        <p>
-            <strong>LinkedIn</strong><br>
-            <a href="#" target="_blank">LinkedIn Profile Placeholder</a>
-        </p>
+        <p><strong>Email</strong><br>
+        <a href="mailto:jjesuraj@my365.bellevue.edu">jjesuraj@my365.bellevue.edu</a></p>
+        <p><strong>GitHub</strong><br><a href="#" target="_blank">GitHub Profile Placeholder</a></p>
+        <p><strong>LinkedIn</strong><br><a href="#" target="_blank">LinkedIn Profile Placeholder</a></p>
     </div>
 </section>
 
-<footer>
-    &copy; 2026 Josephine Jesuraj | Data Science Portfolio
-</footer>
+<footer>&copy; 2026 Josephine Jesuraj | Data Science Portfolio</footer>
 
 <script>
     function openTab(tabName, button) {
-        const contents = document.querySelectorAll('.tab-content');
-        const buttons = document.querySelectorAll('.tab-button');
-
-        contents.forEach(content => content.classList.remove('active'));
-        buttons.forEach(btn => btn.classList.remove('active'));
-
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
         document.getElementById(tabName).classList.add('active');
         button.classList.add('active');
-
         history.replaceState(null, '', '#' + tabName);
         window.scrollTo(0, 0);
     }
 
     function openTabByName(tabName) {
-        const buttons = document.querySelectorAll('.tab-button');
-
-        buttons.forEach(button => {
+        document.querySelectorAll('.tab-button').forEach(button => {
             if (button.textContent.toLowerCase() === tabName.toLowerCase()) {
                 openTab(tabName, button);
             }
@@ -432,7 +323,6 @@
 
     window.addEventListener('load', function() {
         const tabName = window.location.hash.replace('#', '');
-
         if (tabName && document.getElementById(tabName)) {
             openTabByName(tabName);
         }
