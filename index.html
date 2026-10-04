@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Josephine Jesuraj | Data Science Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #1f2937;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            background-color: #e8eef5;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            font-weight: normal;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 5px;
+        }
+
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #1f2937;
+            margin-bottom: 35px;
+        }
+
+        .about-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            background-color: #e5e7eb;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h3 {
+            color: #1f2937;
+            margin-top: 0;
+        }
+
+        .project-card p {
+            margin-bottom: 12px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .contact-box {
+            background-color: white;
+            text-align: center;
+            padding: 35px;
+            border-radius: 10px;
+        }
+
+        .contact-box a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>Josephine Jesuraj</h1>
+        <h2>Data Science | Data Analytics | Technology</h2>
+        <p>
+            Welcome to my professional portfolio. This portfolio highlights
+            my academic projects, technical skills, and experience applying
+            data science and analytical techniques to real-world problems.
+        </p>
+
+        <a href="#projects" class="button">View My Projects</a>
+        <a href="#about" class="button">About Me</a>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about-content">
+            <p>
+                I am an information technology professional with experience
+                working with technology, data, and business systems. I am
+                currently expanding my knowledge and technical skills through
+                graduate studies in Data Science at Bellevue University.
+            </p>
+
+            <p>
+                Through my coursework and projects, I am developing hands-on
+                experience in areas such as data analysis, data visualization,
+                machine learning, predictive modeling, statistical analysis,
+                and artificial intelligence.
+            </p>
+
+            <p>
+                This portfolio presents selected academic and technical
+                projects that demonstrate my ability to analyze data,
+                identify patterns, develop models, and communicate meaningful
+                insights.
+            </p>
+
+            <p>
+                My goal is to continue developing my data science and
+                analytical skills and apply them to real-world business
+                challenges.
+            </p>
+
+            <h3>Skills & Technologies</h3>
+
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Pandas</span>
+                <span class="skill">NumPy</span>
+                <span class="skill">Scikit-learn</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">Data Visualization</span>
+                <span class="skill">Jupyter Notebook</span>
+                <span class="skill">GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Project 1: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 2: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 3: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 4: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 5: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 6: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 7: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 8: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 9: Project Title</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project description placeholder.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    Tools placeholder.
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    Skills placeholder.
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    Outcome placeholder.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 10: TBD</h3>
+
+                <p>
+                    <strong>Project Overview:</strong><br>
+                    Project will be added later.
+                </p>
+
+                <p>
+                    <strong>Tools & Technologies:</strong><br>
+                    TBD
+                </p>
+
+                <p>
+                    <strong>Key Skills:</strong><br>
+                    TBD
+                </p>
+
+                <p>
+                    <strong>Outcome:</strong><br>
+                    TBD
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="contact-box">
+            <p>
+                I welcome opportunities to connect and discuss
+                data science, analytics, technology, and professional
+                opportunities.
+            </p>
+
+            <p>
+                <strong>Email:</strong><br>
+                <a href="mailto:jjesuraj@my365.bellevue.edu">
+                    jjesuraj@my365.bellevue.edu
+                </a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong><br>
+                <a href="#" target="_blank">
+                    GitHub Profile
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong><br>
+                <a href="#" target="_blank">
+                    LinkedIn Profile
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Josephine Jesuraj | Data Science Portfolio</p>
+    </footer>
+
+</body>
+</html>
