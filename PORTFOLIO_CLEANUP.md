@@ -10,8 +10,8 @@ This is the **single repository-wide cleanup record** for the data science portf
 | Original item | Portfolio location / action |
 |---|---|
 | `Josephine_jesuraj_DSC_530_Final Project .ipynb` | Renamed to `Projects/Superstore_Sales/notebooks/superstore_exploratory_analysis.ipynb` |
-| `Data/Superstore.csv` | Retained as `Projects/Superstore_Sales/data/Superstore.csv` |
-| `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, `superstore_encoded.csv` | Retained at project root for original-notebook compatibility |
+| `Data/Superstore.csv` | Retained as `Projects/Superstore_Sales/data/raw/Superstore.csv` |
+| `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, `superstore_encoded.csv` | Moved to `Projects/Superstore_Sales/data/processed/`; original notebook path references still need verification |
 | Original coursework report/drafts | Not published in current project folder pending content review |
 
 ### Corrected or added
@@ -60,9 +60,11 @@ This is the **single repository-wide cleanup record** for the data science portf
 
 - **2026-11-01:** Reorganized both published projects into consistent `notebooks/` and `scripts/` directories. Adjusted standalone script base paths and Colab README links. Retained original notebook bytes and prepared Superstore CSVs to avoid speculative notebook edits.
 
+- **2026-11-01:** Organized Superstore source data in `data/raw/` and transformed datasets in `data/processed/`, preserving original file blobs. Updated standalone script and project README; notebook path migration remains pending.
+
 ## Pending tasks
 - Run both original notebooks end-to-end in fresh Colab runtimes and record any necessary fixes.
-- Notebook and standalone-script files have been placed in common `notebooks/` and `scripts/` directories, and README links and script paths were updated. The three Superstore prepared CSVs remain at the project root for original-notebook compatibility until its complete execution is verified.
+- Notebook and standalone-script files have been placed in common `notebooks/` and `scripts/` directories, and README links and script paths were updated. The original Superstore CSV was moved to `data/raw/` and the three prepared CSVs to `data/processed/`. The standalone script path was updated. The original notebook's complete compatibility with these moved paths remains unverified and must be corrected before claiming Colab reproducibility.
 - Review and publish remaining portfolio projects as their original files become available.
 - Record future verified fixes, renamed files, and removed materials **here**, not in separate project cleanup logs.
 

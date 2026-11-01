@@ -15,11 +15,11 @@ Strong revenue does not necessarily imply strong profit. A retailer needs to ide
 
 ## Dataset
 - **Source:** Tableau Sample Superstore, used in the original coursework. [Original source](https://www.tableau.com/sites/default/files/2021-05/Sample%20-%20Superstore.xls).
-- **File:** `data/Superstore.csv`.
+- **File:** `data/raw/Superstore.csv`.
 - **Size:** 9,994 records and 21 columns.
 - **Unit of analysis:** Order line item, not unique customer or unique order.
 - **Relevant fields:** `Order Date`, `Sales`, `Profit`, `Discount`, `Category`, `Region`, and `Segment`.
-- **Prepared notebook inputs:** `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, and `superstore_encoded.csv` are retained for compatibility with the original exploratory notebook.
+- **Prepared notebook inputs:** `data/processed/superstore_cleaned.csv`, `data/processed/superstore_cleaned_encoded.csv`, and `data/processed/superstore_encoded.csv` are retained for compatibility with the original exploratory notebook.
 
 ## Tools and methods
 Python, pandas, Matplotlib, Jupyter Notebook, and the additional packages listed in `requirements.txt`.
@@ -58,23 +58,24 @@ python -m pip install -r requirements.txt
 python scripts/superstore_sales_analysis.py
 ```
 
-The script reads `data/Superstore.csv` relative to the project directory and writes outputs to `outputs/`. It was successfully executed against the supplied dataset during portfolio preparation.
+The script reads `data/raw/Superstore.csv` relative to the project directory and writes outputs to `outputs/`. It was successfully executed against the supplied dataset during portfolio preparation.
 
 ## Open the original notebook in Google Colab
 [**Open Superstore notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/notebooks/superstore_exploratory_analysis.ipynb)
 
-Use **Runtime → Run all**. The notebook contains portable data-loading changes intended to retrieve missing inputs from the public repository. **Full fresh-Colab execution has not yet been independently verified**, and later statistical/modeling cells may require additional dependencies or time. If Colab cannot locate a file, first confirm the corresponding CSV is committed to this repository.
+Use **Runtime → Run all**. The original notebook has older dataset paths and may require path updates after this reorganization. **Full fresh-Colab execution has not yet been independently verified**, and later statistical/modeling cells may require additional dependencies or time. If Colab cannot locate a file, first confirm the corresponding CSV is committed to this repository.
 
 For local Jupyter, launch `python -m notebook` from this project directory and open `notebooks/superstore_exploratory_analysis.ipynb`.
 
 ## Project folder layout
 
-- `data/`: original Superstore CSV
+- `data/raw/`: original Superstore CSV
+- `data/processed/`: three prepared and encoded CSVs
 - `notebooks/`: original exploratory notebook
 - `scripts/`: reproducible standalone analysis
 - `outputs/`: saved figures and summary tables
 - `requirements.txt`: dependencies
-- **Notebook compatibility files:** the three prepared CSVs remain at the project root because the original notebook still refers to those paths; they will be moved only after its entire execution has been verified.
+- **Notebook compatibility files:** the three prepared CSVs have been moved to `data/processed/`. The original notebook has not yet been fully migrated to these new paths; its full Run all is **not verified**. Use the standalone script for the verified entry point.
 
 ## Limitations and responsible interpretation
 This is a historical sample dataset rather than live retail data. Line-item losses do not establish that discounting caused the loss. Findings should be interpreted alongside costs, product strategy, and current operational context before making decisions.

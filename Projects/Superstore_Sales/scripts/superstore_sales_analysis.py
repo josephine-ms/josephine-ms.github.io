@@ -6,7 +6,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 BASE = Path(__file__).resolve().parent.parent
-DATA = BASE / "data" / "Superstore.csv"
+DATA = BASE / "data" / "raw" / "Superstore.csv"
 OUT = BASE / "outputs"
 
 def main():
