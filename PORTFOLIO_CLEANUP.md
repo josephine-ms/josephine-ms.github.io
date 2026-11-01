@@ -9,13 +9,13 @@ This is the **single repository-wide cleanup record** for the data science portf
 ### Renamed and organized
 | Original item | Portfolio location / action |
 |---|---|
-| `Josephine_jesuraj_DSC_530_Final Project .ipynb` | Renamed to `Projects/Superstore_Sales/notebooks/superstore_exploratory_analysis.ipynb` |
+| `Josephine_jesuraj_DSC_530_Final Project .ipynb` | Renamed to `Projects/Superstore_Sales/notebooks/Superstore_Sales.ipynb` |
 | `Data/Superstore.csv` | Retained as `Projects/Superstore_Sales/data/raw/Superstore.csv` |
 | `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, `superstore_encoded.csv` | Moved to `Projects/Superstore_Sales/data/processed/`; original notebook path references still need verification |
 | Original coursework report/drafts | Not published in current project folder pending content review |
 
 ### Corrected or added
-- Created `superstore_sales_analysis.py` as a standalone reproducible analysis with paths relative to the script.
+- Created `Superstore_Sales.py` as a standalone reproducible analysis with paths relative to the script.
 - Added `requirements.txt`, `.gitignore`, results tables, charts, and an expanded project README.
 - Added portable dataset-loading changes and a Colab link to the original notebook workflow.
 - Removed unresolved Git merge-conflict markers from the README during this repository cleanup.
@@ -33,9 +33,9 @@ This is the **single repository-wide cleanup record** for the data science portf
 **Source:** Original DSC 680 milestone notebook and IBM Telco Customer Churn sample.
 
 ### Renamed and organized
-- Notebook published as `Projects/Telecom_Customer_Churn/notebooks/telecom_customer_churn_prediction.ipynb`.
+- Notebook published as `Projects/Telecom_Customer_Churn/notebooks/Telecom_Customer_Churn.ipynb`.
 - Dataset published as `Projects/Telecom_Customer_Churn/data/telco_customer_churn.csv`.
-- Standalone modeling script published as `Projects/Telecom_Customer_Churn/scripts/telecom_churn_modeling.py`.
+- Standalone modeling script published as `Projects/Telecom_Customer_Churn/scripts/Telecom_Customer_Churn.py`.
 - Model comparison outputs and contract churn chart published in `outputs/`.
 
 ### Corrected or added
@@ -61,6 +61,8 @@ This is the **single repository-wide cleanup record** for the data science portf
 - **2026-11-01:** Reorganized both published projects into consistent `notebooks/` and `scripts/` directories. Adjusted standalone script base paths and Colab README links. Retained original notebook bytes and prepared Superstore CSVs to avoid speculative notebook edits.
 
 - **2026-11-01:** Organized Superstore source data in `data/raw/` and transformed datasets in `data/processed/`, preserving original file blobs. Updated standalone script and project README; notebook path migration remains pending.
+
+- **2026-11-01:** Standardized both projects so the project folder and notebook/Python script base filenames match exactly: `Superstore_Sales` and `Telecom_Customer_Churn`. Updated README instructions and Colab URLs. Original code and notebook contents were preserved.
 
 ## Pending tasks
 - Run both original notebooks end-to-end in fresh Colab runtimes and record any necessary fixes.

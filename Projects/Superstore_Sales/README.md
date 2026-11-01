@@ -55,17 +55,17 @@ Prerequisites: Python and Git. Run from a terminal:
 git clone https://github.com/josephine-ms/josephine-ms.github.io.git
 cd josephine-ms.github.io/Projects/Superstore_Sales
 python -m pip install -r requirements.txt
-python scripts/superstore_sales_analysis.py
+python scripts/Superstore_Sales.py
 ```
 
 The script reads `data/raw/Superstore.csv` relative to the project directory and writes outputs to `outputs/`. It was successfully executed against the supplied dataset during portfolio preparation.
 
 ## Open the original notebook in Google Colab
-[**Open Superstore notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/notebooks/superstore_exploratory_analysis.ipynb)
+[**Open Superstore notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/notebooks/Superstore_Sales.ipynb)
 
 Use **Runtime → Run all**. The original notebook has older dataset paths and may require path updates after this reorganization. **Full fresh-Colab execution has not yet been independently verified**, and later statistical/modeling cells may require additional dependencies or time. If Colab cannot locate a file, first confirm the corresponding CSV is committed to this repository.
 
-For local Jupyter, launch `python -m notebook` from this project directory and open `notebooks/superstore_exploratory_analysis.ipynb`.
+For local Jupyter, launch `python -m notebook` from this project directory and open `notebooks/Superstore_Sales.ipynb`.
 
 ## Project folder layout
 
