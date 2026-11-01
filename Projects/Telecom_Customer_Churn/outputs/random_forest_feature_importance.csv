@@ -1,0 +1,54 @@
+feature,importance
+cat__Contract_Month-to-month,0.11233005905547837
+cat__OnlineSecurity_No,0.0810818886344218
+num__tenure,0.07885857483630537
+num__TotalCharges,0.058342548745081775
+num__MonthlyCharges,0.05445800584376147
+cat__Contract_Two year,0.05192835424991325
+cat__TechSupport_No,0.04656280551623793
+cat__InternetService_Fiber optic,0.03883759333350108
+cat__TenureGroup_0-12,0.03628545765038251
+cat__OnlineBackup_No,0.028640385156442322
+cat__PaymentMethod_Electronic check,0.0271288427063571
+cat__OnlineSecurity_Yes,0.024193637440280615
+cat__Contract_One year,0.022870037170465776
+cat__PaymentCategory_Electronic Check,0.02248029670016203
+cat__PaperlessBilling_Yes,0.01961533870771189
+cat__PaperlessBilling_No,0.01933526445941362
+cat__TechSupport_Yes,0.017152970339804653
+cat__DeviceProtection_No,0.016392198251166293
+cat__InternetService_DSL,0.013888795846425486
+cat__OnlineBackup_Yes,0.011029565651831462
+cat__Dependents_Yes,0.010799860623522903
+cat__gender_Male,0.010717001115917425
+cat__MultipleLines_No,0.010699624990689681
+cat__Partner_Yes,0.010630691918016681
+cat__PaymentCategory_Automatic,0.010619565683748585
+cat__TenureGroup_61-72,0.010512771903102808
+cat__gender_Female,0.01050293287538542
+cat__Partner_No,0.0102202363020364
+cat__MultipleLines_Yes,0.009817140476842434
+cat__Dependents_No,0.00957866218311649
+cat__StreamingTV_Yes,0.009180898570495288
+cat__StreamingMovies_Yes,0.008663530546558823
+cat__StreamingTV_No,0.008460033931060727
+cat__DeviceProtection_Yes,0.008032990574056436
+cat__StreamingMovies_No,0.007933591473070392
+cat__PaymentMethod_Credit card (automatic),0.007470002368670751
+cat__PaymentMethod_Bank transfer (automatic),0.006961241410693237
+cat__TenureGroup_25-48,0.006543091180879952
+cat__TenureGroup_13-24,0.005748389507293779
+num__SeniorCitizen,0.005006675198158283
+cat__TenureGroup_49-60,0.004800249636838918
+cat__PaymentCategory_Mailed Check,0.00449006534008888
+cat__PaymentMethod_Mailed check,0.0043218316219508215
+cat__OnlineBackup_No internet service,0.003439705396613602
+cat__InternetService_No,0.0033567668385003535
+cat__OnlineSecurity_No internet service,0.00312643517178455
+cat__TechSupport_No internet service,0.0028439544195040627
+cat__DeviceProtection_No internet service,0.002796366342686308
+cat__PhoneService_Yes,0.0024773507238608178
+cat__MultipleLines_No phone service,0.0024687560853549474
+cat__PhoneService_No,0.0024380906986955636
+cat__StreamingTV_No internet service,0.0022381249011454167
+cat__StreamingMovies_No internet service,0.0016907496945144545
