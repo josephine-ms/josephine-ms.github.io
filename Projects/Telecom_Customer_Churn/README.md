@@ -52,3 +52,16 @@ This public sample omits customer satisfaction, complaints, competitor pricing, 
 
 ## Source and credit
 Based on Josephine Jesuraj's original DSC 680 churn notebook. Dataset distributed as the IBM Telco Customer Churn sample. The public-facing filename removes course and milestone references; the original work is preserved in the cleaned notebook.
+
+## Run the notebook (professor/reviewer)
+
+[**Open notebook in Google Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Telecom_Customer_Churn/telecom_customer_churn_prediction.ipynb)
+
+1. Open the link above and choose **Runtime → Run all**.
+2. The setup cell downloads missing project datasets from this public GitHub repository. No manual file upload or local path editing is required, provided the datasets have been committed to GitHub.
+3. Wait for the analysis to finish. Some model tuning cells can take several minutes.
+
+**Local alternative:** Clone the repository, change directory to `Projects/Telecom_Customer_Churn`, install dependencies using `python -m pip install -r requirements.txt`, then run the notebook in Jupyter or execute the included `.py` analysis script.
+
+**Verification note:** These notebooks have been modified for portable data loading, but a complete fresh-Colab `Run all` has not been independently verified. Please report any remaining execution error for correction.
+
