@@ -1,67 +1,81 @@
 # Telecom Customer Churn Prediction
 
+## Project overview
+This project uses **7,043 customer records** from the IBM Telco Customer Churn sample to investigate customer attrition and compare predictive models. The business objective is to identify customers who may benefit from proactive retention outreach while balancing model accuracy with the ability to detect actual churners.
+
 ## Business problem
-Identify customers at risk of leaving a telecommunications provider so retention teams can prioritize outreach. Predictions are associations, not evidence of causation.
+Retention teams have limited time and resources. A model that achieves high accuracy but misses many customers who churn may be less useful than one with stronger recall. This project examines that trade-off rather than selecting a model on accuracy alone.
 
-## Data
-IBM Telco Customer Churn sample, **7,043 customer records**. Local file: `data/telco_customer_churn.csv`. Target: `Churn` (Yes/No). The customer identifier is excluded from modeling. `TotalCharges` is converted to numeric and missing values are imputed within the training pipeline.
+## Research questions
+1. How common is churn in the sample?
+2. How does churn vary by contract type?
+3. How do Logistic Regression, Random Forest, and XGBoost compare against a simple baseline?
+4. Which model offers the best trade-off among accuracy, recall, F1, and ROC-AUC?
+5. What limitations matter before applying predictions to retention decisions?
 
-## Methods
-The preserved notebook compares a dummy baseline, Logistic Regression, tuned Random Forest, and XGBoost. It uses an 80/20 stratified split, feature engineering, imputation, one-hot encoding, scaling, and training-only SMOTE. The notebook also includes cross-validation, threshold analysis, and feature importance.
+## Dataset
+- **Source:** IBM Telco Customer Churn sample.
+- **File:** `data/telco_customer_churn.csv`.
+- **Records:** 7,043; **churned:** 1,869 (approximately 26.54%).
+- **Target:** `Churn` (Yes/No).
+- **Example predictors:** `tenure`, `Contract`, `MonthlyCharges`, `TotalCharges`, payment method, and service subscriptions.
+- **Data preparation:** Customer identifier excluded; `TotalCharges` converted to numeric; missing values imputed within the modeling pipeline.
 
-The executable Python script runs a **faster, fixed-parameter reproduction** of the same modeling families; it does not repeat the notebook's Random Forest grid search or full cross-validation. Therefore its metrics may differ from those reported in the notebook.
+## Tools and methodology
+Python, pandas, NumPy, scikit-learn, imbalanced-learn (SMOTE), XGBoost, Matplotlib, and Jupyter.
 
-## Verified results from the standalone script
+The standalone analysis uses an **80/20 stratified train/test split**, feature engineering, numeric scaling, categorical one-hot encoding, and SMOTE applied to the training data. It compares a dummy majority-class baseline with Logistic Regression, Random Forest, and XGBoost. The original notebook contains additional cross-validation, tuning, and threshold analysis.
 
+**Important:** The reproducible script uses fixed model parameters and does not repeat every tuning step in the original notebook; results can therefore differ.
+
+## Model results from the executed standalone script
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
 |---|---:|---:|---:|---:|---:|
-| Dummy Baseline | 0.735 | 0.000 | 0.000 | 0.000 | 0.500 |
-| Logistic Regression | 0.743 | 0.510 | 0.791 | 0.621 | 0.841 |
-| Random Forest | 0.767 | 0.554 | 0.631 | 0.590 | 0.835 |
-| XGBoost | 0.785 | 0.592 | 0.610 | 0.601 | 0.840 |
+| Dummy baseline | 73.46% | 0.00% | 0.00% | 0.000 | 0.500 |
+| Logistic Regression | 74.31% | 51.03% | **79.14%** | **0.621** | **0.841** |
+| Random Forest | 76.72% | 55.40% | 63.10% | 0.590 | 0.835 |
+| XGBoost | **78.50%** | **59.22%** | 60.96% | 0.601 | 0.840 |
 
-Observed churn by contract type:
+**Interpretation:** XGBoost has the highest accuracy in this execution. Logistic Regression has higher recall, finding more of the customers who actually churned. Which model is preferable depends on the cost of missed churners versus unnecessary outreach.
 
-- Month-to-month: 42.71% of 3,875 customers
-- One year: 11.27% of 1,473 customers
-- Two year: 2.83% of 1,695 customers
+## Observed churn by contract
+| Contract type | Customers | Churn rate |
+|---|---:|---:|
+| Month-to-month | 3,875 | **42.71%** |
+| One year | 1,473 | 11.27% |
+| Two year | 1,695 | 2.83% |
 
-The Random Forest importance table is in `outputs/random_forest_feature_importance.csv`. These rankings describe predictive contributions, not causal drivers.
+These are descriptive associations and should not be interpreted as proof that contract length causes churn.
 
-## How to run (GitHub Codespaces or locally)
+## Outputs
+- [Model comparison metrics](outputs/model_metrics.csv)
+- [Churn by contract chart](outputs/churn_by_contract.png)
+- [Churn by contract table](outputs/churn_by_contract.csv)
+- [Random Forest feature importance](outputs/random_forest_feature_importance.csv)
+
+## How to run from GitHub on a computer
+Prerequisites: Python and Git.
 
 ```bash
-cd Projects/Telecom_Customer_Churn
+git clone https://github.com/josephine-ms/josephine-ms.github.io.git
+cd josephine-ms.github.io/Projects/Telecom_Customer_Churn
 python -m pip install -r requirements.txt
 python telecom_churn_modeling.py
 ```
 
-To inspect the original analysis notebook:
+The script reads `data/telco_customer_churn.csv` relative to its own location and writes results to `outputs/`. It was previously executed successfully with the supplied dataset.
 
-```bash
-jupyter notebook telecom_customer_churn_prediction.ipynb
-```
+## Open the original notebook in Google Colab
+[**Open Telecom notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Telecom_Customer_Churn/telecom_customer_churn_prediction.ipynb)
 
-Run notebook cells in order from this project folder. The notebook includes a more computationally expensive grid search and cross-validation, and has **not** been fully rerun as part of this packaging.
+Select **Runtime → Run all**. The notebook includes a setup cell intended to retrieve the dataset from the public repository when it is missing locally. **Full fresh-Colab execution, including tuning and cross-validation, has not yet been independently verified.** Model fitting may take several minutes.
 
-## Outputs
-`outputs/model_metrics.csv`, `outputs/churn_by_contract.csv`, `outputs/churn_by_contract.png`, and `outputs/random_forest_feature_importance.csv`.
+For local Jupyter, from this project directory run `python -m notebook` and open `telecom_customer_churn_prediction.ipynb`.
 
-## Limitations and ethics
-This public sample omits customer satisfaction, complaints, competitor pricing, and operational incidents. Test performance may not generalize to live customers. Use retention scores with fairness monitoring, privacy controls, and human review.
+## Limitations, ethics, and future work
+The dataset is a public sample and lacks customer satisfaction, competitor pricing, service incidents, and other potentially important factors. Predictive importance is not causation. In real deployments, protect customer privacy, review fairness across customer groups, monitor performance drift, and use human judgment for retention interventions. Future work includes threshold calibration, cost-sensitive evaluation, and external validation.
 
-## Source and credit
-Based on Josephine Jesuraj's original DSC 680 churn notebook. Dataset distributed as the IBM Telco Customer Churn sample. The public-facing filename removes course and milestone references; the original work is preserved in the cleaned notebook.
-
-## Run the notebook (professor/reviewer)
-
-[**Open notebook in Google Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Telecom_Customer_Churn/telecom_customer_churn_prediction.ipynb)
-
-1. Open the link above and choose **Runtime → Run all**.
-2. The setup cell downloads missing project datasets from this public GitHub repository. No manual file upload or local path editing is required, provided the datasets have been committed to GitHub.
-3. Wait for the analysis to finish. Some model tuning cells can take several minutes.
-
-**Local alternative:** Clone the repository, change directory to `Projects/Telecom_Customer_Churn`, install dependencies using `python -m pip install -r requirements.txt`, then run the notebook in Jupyter or execute the included `.py` analysis script.
-
-**Verification note:** These notebooks have been modified for portable data loading, but a complete fresh-Colab `Run all` has not been independently verified. Please report any remaining execution error for correction.
-
+## Reproducibility status
+- **Standalone Python script:** executed successfully with the supplied dataset.
+- **Original notebook:** preserved; full fresh-environment Run all remains unverified.
+- **Cleanup and file provenance:** see the single [portfolio cleanup log](../../PORTFOLIO_CLEANUP.md).

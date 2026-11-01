@@ -1,54 +1,76 @@
 # Superstore Sales and Business Performance Analysis
 
+## Project overview
+This project examines **9,994 retail order line items** to understand sales, profitability, and performance differences across categories, customer segments, regions, and time. The objective is to turn descriptive retail data into business-relevant findings while preserving the original exploratory notebook and a simpler, reproducible Python analysis.
+
 ## Business problem
-Evaluate retail sales and profitability across product categories, customer segments, regions, and time. Identify where revenue does not translate into profit.
+Strong revenue does not necessarily imply strong profit. A retailer needs to identify where sales generate losses, which product categories contribute profit, and which regions deserve closer investigation.
+
+## Research questions
+1. What are the overall sales, profit, and profit margin?
+2. How many transaction lines show a loss?
+3. Which product categories and regions contribute the most profit?
+4. How do sales and profit vary over time?
+5. Which areas warrant follow-up investigation before operational decisions are made?
 
 ## Dataset
-The included `data/Superstore.csv` contains **9,994 line-item records** and 21 columns, including order dates, sales, profit, discount, category, region, and customer segment. Source cited in the original notebook: [Tableau Sample Superstore](https://www.tableau.com/sites/default/files/2021-05/Sample%20-%20Superstore.xls). This repository includes the CSV from the original coursework archive.
+- **Source:** Tableau Sample Superstore, used in the original coursework. [Original source](https://www.tableau.com/sites/default/files/2021-05/Sample%20-%20Superstore.xls).
+- **File:** `data/Superstore.csv`.
+- **Size:** 9,994 records and 21 columns.
+- **Unit of analysis:** Order line item, not unique customer or unique order.
+- **Relevant fields:** `Order Date`, `Sales`, `Profit`, `Discount`, `Category`, `Region`, and `Segment`.
+- **Prepared notebook inputs:** `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, and `superstore_encoded.csv` are retained for compatibility with the original exploratory notebook.
 
-## Findings from the supplied dataset
-- Total sales: **$2,297,200.86**; total profit: **$286,397.02**; overall profit margin: **12.47%**.
-- **1,871** transaction lines have negative profit.
-- Highest-profit category: **Technology** ($145,454.95). Lowest-profit category: **Furniture** ($18,451.27).
-- Highest-profit region: **West** ($108,418.45).
+## Tools and methods
+Python, pandas, Matplotlib, Jupyter Notebook, and the additional packages listed in `requirements.txt`.
 
-These are descriptive findings, not causal estimates. The original notebook also explores statistical tests and predictive modeling; its model metrics have not been independently reproduced here.
+The verified standalone script reads the original CSV, validates required columns and order dates, calculates portfolio KPIs, aggregates category/region/segment performance, creates monthly summaries, and saves charts and tables. The preserved notebook contains broader exploratory, statistical, and modeling work; results from those additional sections are not presented as independently verified here.
 
-## Run the reproducible analysis
-From this folder in GitHub Codespaces, a local terminal, or another Python environment:
+## Key findings
+| Measure | Result |
+|---|---:|
+| Total sales | **$2,297,200.86** |
+| Total profit | **$286,397.02** |
+| Overall profit margin | **12.47%** |
+| Loss-making transaction lines | **1,871** |
+| Highest-profit category | **Technology: $145,454.95** |
+| Lowest-profit category | **Furniture: $18,451.27** |
+| Highest-profit region | **West: $108,418.45** |
+
+These findings come from the supplied historical sample. They indicate where to investigate product mix, pricing, and discount patterns; they do not establish causal explanations for losses.
+
+## Visualizations and generated results
+- [Monthly sales chart](outputs/monthly_sales.png)
+- [Profit by category](outputs/profit_by_category.png)
+- [Summary KPIs](outputs/summary_metrics.csv)
+- [Category breakdown](outputs/sales_profit_by_category.csv)
+- [Region breakdown](outputs/sales_profit_by_region.csv)
+- [Segment breakdown](outputs/sales_profit_by_segment.csv)
+- [Monthly sales and profit](outputs/monthly_sales_profit.csv)
+
+## How to run from GitHub on a computer
+Prerequisites: Python and Git. Run from a terminal:
 
 ```bash
+git clone https://github.com/josephine-ms/josephine-ms.github.io.git
+cd josephine-ms.github.io/Projects/Superstore_Sales
 python -m pip install -r requirements.txt
 python superstore_sales_analysis.py
 ```
 
-The script reads `data/Superstore.csv` and creates summary CSV files and PNG charts in `outputs/`. The script was executed successfully against the included dataset during portfolio preparation.
+The script reads `data/Superstore.csv` relative to the script's own location and writes outputs to `outputs/`. It was successfully executed against the supplied dataset during portfolio preparation.
 
-## Original notebook
-`superstore_exploratory_analysis.ipynb` preserves the original exploratory work and its statistical and machine-learning sections. It expects the three prepared CSV files at the project root. Its full cell-by-cell execution is **not yet verified**. The accompanying standalone script is the verified reproducible entry point.
+## Open the original notebook in Google Colab
+[**Open Superstore notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/superstore_exploratory_analysis.ipynb)
 
-## Files
-- `superstore_sales_analysis.py`: verified sales and profitability analysis
-- `superstore_exploratory_analysis.ipynb`: original coursework notebook, renamed for portfolio use
-- `data/Superstore.csv`: original input data
-- `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, `superstore_encoded.csv`: prepared datasets used by original notebook
-- `outputs/`: generated results and figures
+Use **Runtime → Run all**. The notebook contains portable data-loading changes intended to retrieve missing inputs from the public repository. **Full fresh-Colab execution has not yet been independently verified**, and later statistical/modeling cells may require additional dependencies or time. If Colab cannot locate a file, first confirm the corresponding CSV is committed to this repository.
 
-## Limitations
-This is a historical sample retail dataset. Discounts and profits may be associated but the analysis does not establish that discounts cause losses. Results are not forecasts of current retail performance.
-<<<<<<< HEAD
+For local Jupyter, launch `python -m notebook` from this project directory and open `superstore_exploratory_analysis.ipynb`.
 
-## Run the notebook (professor/reviewer)
+## Limitations and responsible interpretation
+This is a historical sample dataset rather than live retail data. Line-item losses do not establish that discounting caused the loss. Findings should be interpreted alongside costs, product strategy, and current operational context before making decisions.
 
-[**Open notebook in Google Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/superstore_exploratory_analysis.ipynb)
-
-1. Open the link above and choose **Runtime → Run all**.
-2. The setup cell downloads missing project datasets from this public GitHub repository. No manual file upload or local path editing is required, provided the datasets have been committed to GitHub.
-3. Wait for the analysis to finish. Some model tuning cells can take several minutes.
-
-**Local alternative:** Clone the repository, change directory to `Projects/Superstore_Sales`, install dependencies using `python -m pip install -r requirements.txt`, then run the notebook in Jupyter or execute the included `.py` analysis script.
-
-**Verification note:** These notebooks have been modified for portable data loading, but a complete fresh-Colab `Run all` has not been independently verified. Please report any remaining execution error for correction.
-
-=======
->>>>>>> 5392c29ea4162752488bcc9bf6730d9100e2aaa8
+## Reproducibility status
+- **Standalone Python script:** executed successfully with the included dataset.
+- **Original exploratory notebook:** preserved; complete fresh-environment Run all remains unverified.
+- **Cleanup and file provenance:** see the single [portfolio cleanup log](../../PORTFOLIO_CLEANUP.md).
