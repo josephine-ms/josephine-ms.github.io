@@ -60,17 +60,25 @@ Prerequisites: Python and Git.
 git clone https://github.com/josephine-ms/josephine-ms.github.io.git
 cd josephine-ms.github.io/Projects/Telecom_Customer_Churn
 python -m pip install -r requirements.txt
-python telecom_churn_modeling.py
+python scripts/telecom_churn_modeling.py
 ```
 
-The script reads `data/telco_customer_churn.csv` relative to its own location and writes results to `outputs/`. It was previously executed successfully with the supplied dataset.
+The script reads `data/telco_customer_churn.csv` relative to the project directory and writes results to `outputs/`. It was previously executed successfully with the supplied dataset.
 
 ## Open the original notebook in Google Colab
-[**Open Telecom notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Telecom_Customer_Churn/telecom_customer_churn_prediction.ipynb)
+[**Open Telecom notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Telecom_Customer_Churn/notebooks/telecom_customer_churn_prediction.ipynb)
 
 Select **Runtime → Run all**. The notebook includes a setup cell intended to retrieve the dataset from the public repository when it is missing locally. **Full fresh-Colab execution, including tuning and cross-validation, has not yet been independently verified.** Model fitting may take several minutes.
 
-For local Jupyter, from this project directory run `python -m notebook` and open `telecom_customer_churn_prediction.ipynb`.
+For local Jupyter, from this project directory run `python -m notebook` and open `notebooks/telecom_customer_churn_prediction.ipynb`.
+
+## Project folder layout
+
+- `data/`: source CSV
+- `notebooks/`: original churn notebook
+- `scripts/`: standalone model comparison
+- `outputs/`: metrics, feature importance, and chart
+- `requirements.txt`: dependencies
 
 ## Limitations, ethics, and future work
 The dataset is a public sample and lacks customer satisfaction, competitor pricing, service incidents, and other potentially important factors. Predictive importance is not causation. In real deployments, protect customer privacy, review fairness across customer groups, monitor performance drift, and use human judgment for retention interventions. Future work includes threshold calibration, cost-sensitive evaluation, and external validation.

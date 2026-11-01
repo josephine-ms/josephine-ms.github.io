@@ -55,17 +55,26 @@ Prerequisites: Python and Git. Run from a terminal:
 git clone https://github.com/josephine-ms/josephine-ms.github.io.git
 cd josephine-ms.github.io/Projects/Superstore_Sales
 python -m pip install -r requirements.txt
-python superstore_sales_analysis.py
+python scripts/superstore_sales_analysis.py
 ```
 
-The script reads `data/Superstore.csv` relative to the script's own location and writes outputs to `outputs/`. It was successfully executed against the supplied dataset during portfolio preparation.
+The script reads `data/Superstore.csv` relative to the project directory and writes outputs to `outputs/`. It was successfully executed against the supplied dataset during portfolio preparation.
 
 ## Open the original notebook in Google Colab
-[**Open Superstore notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/superstore_exploratory_analysis.ipynb)
+[**Open Superstore notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/notebooks/superstore_exploratory_analysis.ipynb)
 
 Use **Runtime → Run all**. The notebook contains portable data-loading changes intended to retrieve missing inputs from the public repository. **Full fresh-Colab execution has not yet been independently verified**, and later statistical/modeling cells may require additional dependencies or time. If Colab cannot locate a file, first confirm the corresponding CSV is committed to this repository.
 
-For local Jupyter, launch `python -m notebook` from this project directory and open `superstore_exploratory_analysis.ipynb`.
+For local Jupyter, launch `python -m notebook` from this project directory and open `notebooks/superstore_exploratory_analysis.ipynb`.
+
+## Project folder layout
+
+- `data/`: original Superstore CSV
+- `notebooks/`: original exploratory notebook
+- `scripts/`: reproducible standalone analysis
+- `outputs/`: saved figures and summary tables
+- `requirements.txt`: dependencies
+- **Notebook compatibility files:** the three prepared CSVs remain at the project root because the original notebook still refers to those paths; they will be moved only after its entire execution has been verified.
 
 ## Limitations and responsible interpretation
 This is a historical sample dataset rather than live retail data. Line-item losses do not establish that discounting caused the loss. Findings should be interpreted alongside costs, product strategy, and current operational context before making decisions.

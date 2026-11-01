@@ -9,7 +9,7 @@ This is the **single repository-wide cleanup record** for the data science portf
 ### Renamed and organized
 | Original item | Portfolio location / action |
 |---|---|
-| `Josephine_jesuraj_DSC_530_Final Project .ipynb` | Renamed to `Projects/Superstore_Sales/superstore_exploratory_analysis.ipynb` |
+| `Josephine_jesuraj_DSC_530_Final Project .ipynb` | Renamed to `Projects/Superstore_Sales/notebooks/superstore_exploratory_analysis.ipynb` |
 | `Data/Superstore.csv` | Retained as `Projects/Superstore_Sales/data/Superstore.csv` |
 | `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, `superstore_encoded.csv` | Retained at project root for original-notebook compatibility |
 | Original coursework report/drafts | Not published in current project folder pending content review |
@@ -33,9 +33,9 @@ This is the **single repository-wide cleanup record** for the data science portf
 **Source:** Original DSC 680 milestone notebook and IBM Telco Customer Churn sample.
 
 ### Renamed and organized
-- Notebook published as `Projects/Telecom_Customer_Churn/telecom_customer_churn_prediction.ipynb`.
+- Notebook published as `Projects/Telecom_Customer_Churn/notebooks/telecom_customer_churn_prediction.ipynb`.
 - Dataset published as `Projects/Telecom_Customer_Churn/data/telco_customer_churn.csv`.
-- Standalone modeling script published as `Projects/Telecom_Customer_Churn/telecom_churn_modeling.py`.
+- Standalone modeling script published as `Projects/Telecom_Customer_Churn/scripts/telecom_churn_modeling.py`.
 - Model comparison outputs and contract churn chart published in `outputs/`.
 
 ### Corrected or added
@@ -55,12 +55,14 @@ This is the **single repository-wide cleanup record** for the data science portf
 
 - **2026-11-01:** Consolidated separate project cleanup logs into this single root-level `PORTFOLIO_CLEANUP.md`.
 - **2026-11-01:** Replaced short project READMEs with project-specific documentation following the supplied reference style.
-- **2026-11-01:** Added a repository root `README.md` to explain navigation and execution.
+- **2026-11-01:** Removed the repository root `README.md` as requested; project documentation is maintained in each project's README.
 - **2026-11-01:** Removed redundant `Projects/Superstore_Sales/CLEANUP_LOG.md` and `Projects/Telecom_Customer_Churn/CLEANUP_LOG.md` after consolidating their relevant contents here.
+
+- **2026-11-01:** Reorganized both published projects into consistent `notebooks/` and `scripts/` directories. Adjusted standalone script base paths and Colab README links. Retained original notebook bytes and prepared Superstore CSVs to avoid speculative notebook edits.
 
 ## Pending tasks
 - Run both original notebooks end-to-end in fresh Colab runtimes and record any necessary fixes.
-- Standardize `notebooks/` and `scripts/` directories only after updating notebook paths and links; the current working project layout is intentionally preserved until then.
+- Notebook and standalone-script files have been placed in common `notebooks/` and `scripts/` directories, and README links and script paths were updated. The three Superstore prepared CSVs remain at the project root for original-notebook compatibility until its complete execution is verified.
 - Review and publish remaining portfolio projects as their original files become available.
 - Record future verified fixes, renamed files, and removed materials **here**, not in separate project cleanup logs.
 
