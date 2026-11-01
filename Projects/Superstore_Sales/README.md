@@ -36,6 +36,7 @@ The script reads `data/Superstore.csv` and creates summary CSV files and PNG cha
 
 ## Limitations
 This is a historical sample retail dataset. Discounts and profits may be associated but the analysis does not establish that discounts cause losses. Results are not forecasts of current retail performance.
+<<<<<<< HEAD
 
 ## Run the notebook (professor/reviewer)
 
@@ -49,3 +50,5 @@ This is a historical sample retail dataset. Discounts and profits may be associa
 
 **Verification note:** These notebooks have been modified for portable data loading, but a complete fresh-Colab `Run all` has not been independently verified. Please report any remaining execution error for correction.
 
+=======
+>>>>>>> 5392c29ea4162752488bcc9bf6730d9100e2aaa8

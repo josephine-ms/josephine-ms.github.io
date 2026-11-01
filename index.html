@@ -117,6 +117,10 @@
             font-weight: bold;
             margin-top: 8px;
         }
+        .project-status { display: inline-block; color: #4b5563; font-weight: 600; margin-top: 8px; }
+        .project-card { transition: transform .2s ease, box-shadow .2s ease; }
+        .project-card:hover { transform: translateY(-3px); box-shadow: 0 7px 22px rgba(0,0,0,.10); }
+        .tab-button:focus-visible, .button:focus-visible, .project-link:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
         .contact { text-align: center; }
         .contact a { color: #2563eb; text-decoration: none; }
         footer {
@@ -148,11 +152,11 @@
 
 <section id="home" class="tab-content active">
     <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>
-            This portfolio highlights selected academic projects, technical skills,
-            and experience applying data science and analytical techniques to real-world problems.
-        </p>
+      <h2>Data Science and Analytics Portfolio</h2>
+      <p>
+    Explore my projects in data analysis, visualization, forecasting, machine learning, and generative AI. These projects demonstrate
+    how I use data to examine business problems, identify patterns, evaluate results, and present findings clearly.
+    </p>
         <button class="button" onclick="openTabByName('projects')">View Projects</button>
         <button class="button" onclick="openTabByName('about')">About Me</button>
     </div>
@@ -161,23 +165,10 @@
 <section id="about" class="tab-content">
     <h2 class="section-title">About Me</h2>
     <div class="card">
-        <p>
-            I am an information technology professional with experience working with technology,
-            data, and business systems. I am currently expanding my knowledge and technical skills
-            through graduate studies in Data Science at Bellevue University.
-        </p>
-        <p>
-            Through my coursework and projects, I am developing hands-on experience in data analysis,
-            data visualization, machine learning, predictive modeling, statistical analysis, and artificial intelligence.
-        </p>
-        <p>
-            This portfolio presents selected academic and technical projects that demonstrate my ability
-            to analyze data, identify patterns, develop models, and communicate meaningful insights.
-        </p>
-        <p>
-            My goal is to continue developing my data science and analytical skills and apply them
-            to real-world business challenges.
-        </p>
+        <p>I am an information technology professional with experience working across technology, data, and business systems. I am pursuing graduate studies in Data Science to strengthen my ability to turn complex information into clear, practical insights.</p>
+        <p>My work and academic projects bring together data preparation, exploratory analysis, visualization, forecasting, machine learning, and generative AI. I enjoy connecting technical methods with real-world questions and explaining the results in ways that are useful to decision-makers.</p>
+        <p>My portfolio includes work across retail, healthcare, entertainment, transportation, and telecommunications. These projects demonstrate how I approach a problem: understand the question, prepare and analyze the data, evaluate the results, and communicate what they mean.</p>
+        <p>I am interested in opportunities involving data analytics, business intelligence, and applied data science, where I can combine technical skills with an understanding of business needs.</p>
         <h3>Skills & Technologies</h3>
         <div class="skills">
             <span class="skill">Python</span>
@@ -216,56 +207,56 @@
             <h3>2. ALS Patient Clustering Analysis</h3>
             <p><strong>Project Overview:</strong><br>Explores ALS patient data using clustering techniques to identify similarities and natural groupings without predefined outcome categories.</p>
             <p><strong>Primary Skills:</strong><br>Python, data preprocessing, clustering, unsupervised machine learning, model evaluation</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <p><strong>Repository:</strong> Preparing project files and documentation.</p>
+            <span class="project-status">Repository link coming soon</span>
         </div>
     
         <div class="project-card">
             <h3>3. U.S. Retail Sales Forecasting</h3>
             <p><strong>Project Overview:</strong><br>Uses historical U.S. retail sales data to examine trends over time and apply time-series techniques to forecast future sales activity.</p>
             <p><strong>Primary Skills:</strong><br>Python, pandas, time-series analysis, forecasting, trend analysis, visualization</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <p><strong>Repository:</strong> Preparing project files and documentation.</p>
+            <span class="project-status">Repository link coming soon</span>
         </div>
     
         <div class="project-card">
             <h3>4. Movie Recommendation and Analytics Using MovieLens</h3>
             <p><strong>Project Overview:</strong><br>Analyzes movie and user-rating data from MovieLens to explore viewing preferences and how rating information can support personalized recommendations.</p>
             <p><strong>Primary Skills:</strong><br>Python, pandas, recommendation systems, exploratory analysis, ratings analysis</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <p><strong>Repository:</strong> Preparing project files and documentation.</p>
+            <span class="project-status">Repository link coming soon</span>
         </div>
     
         <div class="project-card">
             <h3>5. Netflix Top 10 Content Analysis</h3>
             <p><strong>Project Overview:</strong><br>Analyzes Netflix viewing information to explore popular content, movies versus television programs, viewing trends, geographic patterns, and long-running titles.</p>
             <p><strong>Primary Skills:</strong><br>Python, pandas, data visualization, exploratory analysis, trend analysis, data storytelling</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <p><strong>Repository:</strong> Preparing project files and documentation.</p>
+            <span class="project-status">Repository link coming soon</span>
         </div>
     
         <div class="project-card">
             <h3>6. Childcare Cost and Affordability Analysis</h3>
             <p><strong>Project Overview:</strong><br>Examines childcare prices and affordability using the National Database of Childcare Prices and communicates findings through Python, Tableau, and visual storytelling.</p>
             <p><strong>Primary Skills:</strong><br>Python, Tableau, data visualization, dashboarding, socioeconomic analysis, data storytelling</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <p><strong>Repository:</strong> Preparing project files and documentation.</p>
+            <span class="project-status">Repository link coming soon</span>
         </div>
     
         <div class="project-card">
             <h3>7. TSA Passenger Complaints Analysis</h3>
             <p><strong>Project Overview:</strong><br>Analyzes TSA passenger complaints across airports and complaint categories and uses Tableau to identify and communicate recurring patterns.</p>
             <p><strong>Primary Skills:</strong><br>Tableau, Excel, dashboard development, categorical analysis, transportation analytics</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <p><strong>Repository:</strong> Preparing project files and documentation.</p>
+            <span class="project-status">Repository link coming soon</span>
         </div>
     
         <div class="project-card">
             <h3>8. Kia and Hyundai Vehicle Theft Analysis</h3>
             <p><strong>Project Overview:</strong><br>Examines Kia and Hyundai vehicle theft data to identify patterns and demonstrate the use of data analysis and visualization for a public-safety topic.</p>
             <p><strong>Primary Skills:</strong><br>R, R Markdown, data preparation, exploratory analysis, visualization</p>
-            <p><strong>Project Repository:</strong><br>GitHub link placeholder</p>
-            <a href="#" class="project-link">View Project</a>
+            <p><strong>Repository:</strong> Preparing project files and documentation.</p>
+            <span class="project-status">Repository link coming soon</span>
         </div>
     
         <div class="project-card">
@@ -296,8 +287,8 @@
         </p>
         <p><strong>Email</strong><br>
         <a href="mailto:jjesuraj@my365.bellevue.edu">jjesuraj@my365.bellevue.edu</a></p>
-        <p><strong>GitHub</strong><br><a href="#" target="_blank">GitHub Profile Placeholder</a></p>
-        <p><strong>LinkedIn</strong><br><a href="#" target="_blank">LinkedIn Profile Placeholder</a></p>
+        <p><strong>GitHub</strong><br><a href="https://github.com/josephine-ms" target="_blank" rel="noopener noreferrer">github.com/josephine-ms</a></p>
+        <p><strong>LinkedIn</strong><br><span>LinkedIn profile link coming soon</span></p>
     </div>
 </section>
 
