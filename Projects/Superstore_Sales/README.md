@@ -1,71 +1,38 @@
 # Superstore Sales and Business Performance Analysis
 
-## Project Overview
+## Business problem
+Evaluate retail sales and profitability across product categories, customer segments, regions, and time. Identify where revenue does not translate into profit.
 
-This project analyzes Superstore sales data to identify patterns in business performance. The analysis focuses on cleaning and preparing the data, exploring important trends, and using visualizations to communicate meaningful findings.
+## Dataset
+The included `data/Superstore.csv` contains **9,994 line-item records** and 21 columns, including order dates, sales, profit, discount, category, region, and customer segment. Source cited in the original notebook: [Tableau Sample Superstore](https://www.tableau.com/sites/default/files/2021-05/Sample%20-%20Superstore.xls). This repository includes the CSV from the original coursework archive.
 
-The goal of the project is to better understand sales performance and uncover patterns that may support business decision-making.
+## Findings from the supplied dataset
+- Total sales: **$2,297,200.86**; total profit: **$286,397.02**; overall profit margin: **12.47%**.
+- **1,871** transaction lines have negative profit.
+- Highest-profit category: **Technology** ($145,454.95). Lowest-profit category: **Furniture** ($18,451.27).
+- Highest-profit region: **West** ($108,418.45).
 
-## Business Problem
+These are descriptive findings, not causal estimates. The original notebook also explores statistical tests and predictive modeling; its model metrics have not been independently reproduced here.
 
-Organizations often collect large amounts of sales data, but the data is only useful when it is organized, analyzed, and communicated clearly. This project examines Superstore sales information to identify important business patterns and present them in an understandable way.
+## Run the reproducible analysis
+From this folder in GitHub Codespaces, a local terminal, or another Python environment:
 
-## Project Objectives
+```bash
+python -m pip install -r requirements.txt
+python superstore_sales_analysis.py
+```
 
-- Clean and prepare the sales data for analysis
-- Explore overall sales patterns and trends
-- Identify meaningful relationships within the data
-- Create visualizations that support interpretation
-- Communicate findings through clear data storytelling
+The script reads `data/Superstore.csv` and creates summary CSV files and PNG charts in `outputs/`. The script was executed successfully against the included dataset during portfolio preparation.
 
-## Data
+## Original notebook
+`superstore_exploratory_analysis.ipynb` preserves the original exploratory work and its statistical and machine-learning sections. It expects the three prepared CSV files at the project root. Its full cell-by-cell execution is **not yet verified**. The accompanying standalone script is the verified reproducible entry point.
 
-The project uses a Superstore sales dataset containing business and transaction-related information used for exploratory analysis and visualization.
+## Files
+- `superstore_sales_analysis.py`: verified sales and profitability analysis
+- `superstore_exploratory_analysis.ipynb`: original coursework notebook, renamed for portfolio use
+- `data/Superstore.csv`: original input data
+- `superstore_cleaned.csv`, `superstore_cleaned_encoded.csv`, `superstore_encoded.csv`: prepared datasets used by original notebook
+- `outputs/`: generated results and figures
 
-## Tools and Technologies
-
-- Python
-- pandas
-- Jupyter Notebook
-- Data visualization tools
-
-## Methods
-
-The project follows a structured data analysis workflow:
-
-1. Import and review the dataset
-2. Clean and prepare the data
-3. Perform exploratory data analysis
-4. Examine business performance patterns
-5. Create visualizations
-6. Interpret and communicate the results
-
-## Key Skills Demonstrated
-
-- Data cleaning
-- Exploratory data analysis
-- Data visualization
-- Business analysis
-- Data storytelling
-- Python and pandas
-
-## Outcome
-
-The project demonstrates how raw sales data can be transformed into useful business insights through data preparation, exploratory analysis, and visualization. The results provide a clear view of business performance patterns and show how data can support decision-making.
-
-## Repository Contents
-
-This repository may include:
-
-- Jupyter Notebook(s)
-- Dataset or data source information
-- Visualizations
-- Supporting documentation
-
-## Future Improvements
-
-Possible future improvements include expanding the analysis with additional business metrics, creating an interactive dashboard, and applying predictive methods to support forecasting or decision-making.
-
-## Author
-
-Josephine Jesuraj
+## Limitations
+This is a historical sample retail dataset. Discounts and profits may be associated but the analysis does not establish that discounts cause losses. Results are not forecasts of current retail performance.
