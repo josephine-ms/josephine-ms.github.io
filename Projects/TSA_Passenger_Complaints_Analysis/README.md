@@ -16,10 +16,19 @@ The project uses four original Excel files under `data/raw/`:
 - `complaints-by-subcategory.xlsx`
 - `iata-icao.xlsx` (airport identifiers and location reference)
 
-## View the interactive dashboard online
-[**Open TSA Passenger Complaints Analysis in Tableau Public**](https://public.tableau.com/app/profile/josephine.jesuraj/viz/TSAComplaintsAnalysis/TSAComplaintsAnalysis)
+## Explore the Tableau dashboards — two options
 
-This publicly shared Tableau Public view lets visitors explore the visualization in a browser without installing Tableau. The published workbook now uses the professional Tableau Public URL and portfolio title.
+**Option 1: View online (no installation needed)**
+
+[**Open interactive TSA Passenger Complaints dashboard on Tableau Public**](https://public.tableau.com/app/profile/josephine.jesuraj/viz/TSAComplaintsAnalysis/TSAComplaintsAnalysis)
+
+Explore the publicly published dashboard directly in your web browser. This is the quickest option for portfolio reviewers.
+
+**Option 2: Download and open in Tableau**
+
+[**Download the editable Tableau workbook (.twb)**](https://github.com/josephine-ms/josephine-ms.github.io/raw/refs/heads/main/Projects/TSA_Passenger_Complaints_Analysis/tableau/TSA_Passenger_Complaints_Analysis.twb)
+
+To edit or inspect the workbook in Tableau Desktop/Tableau Public Desktop, download the workbook and its [four Excel source files](data/raw/), then follow the local-opening and connection instructions below. Unlike a packaged `.twbx`, the `.twb` does not embed the underlying Excel data.
 
 ## Dashboard and visualizations
 The Tableau workbook contains six worksheets and two dashboards, including:
@@ -33,7 +42,7 @@ The Tableau workbook contains six worksheets and two dashboards, including:
 ## Findings
 The original analysis identifies high complaint volumes at major hubs including LAX, JFK, EWR, ATL, and MCO. Prominent themes include expedited passenger screening, customer service, screening, and passenger property concerns. These are **raw complaint counts**, not rates adjusted for passenger traffic.
 
-## Open the editable workbook locally
+## Local Tableau setup and data reconnection
 1. Install Tableau Desktop or a compatible Tableau authoring environment.
 2. Open `tableau/TSA_Passenger_Complaints_Analysis.twb`.
 3. If Tableau reports missing data sources, use **Data > Edit Connection** to point each Excel connection to the matching file in `data/raw/`.
