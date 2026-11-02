@@ -31,12 +31,12 @@ Install dependencies from the project directory:
 ```bash
 python -m pip install -r requirements.txt
 ```
-Open `notebooks/ALS_Patient_Clustering.ipynb` in Jupyter or Google Colab and run the cells in order. When running in Colab, upload the CSV or make the repository's `data/raw/als_data.csv` available at the expected relative path. The local notebook data loader supports execution from either the project root or the `notebooks` folder.
+Open `notebooks/ALS_Patient_Clustering.ipynb` in Jupyter or Google Colab and run the cells in order. When running in Colab, the notebook automatically loads `als_data.csv` from this public GitHub repository if the CSV is not available locally. The local notebook data loader supports execution from either the project root or the `notebooks` folder.
 
 ## Open the notebook in Google Colab
 [**Open ALS Patient Clustering notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/ALS_Patient_Clustering/notebooks/ALS_Patient_Clustering.ipynb)
 
-Select **Runtime → Run all**. The notebook requires `als_data.csv`; make the dataset available at the expected path before running. A complete fresh-Colab execution has not yet been independently verified.
+Select **Runtime → Run all**. The notebook automatically loads `als_data.csv` from GitHub when the dataset is not found locally (internet access required). A complete fresh-Colab execution has not yet been independently verified.
 
 ## Limitations and Ethics
 K-means is sensitive to scaling and assumes distance-based group structure. Low silhouette scores suggest substantial overlap. Anonymized patient data still require responsible handling. No clinical decisions should rely on these clusters without independent validation.
