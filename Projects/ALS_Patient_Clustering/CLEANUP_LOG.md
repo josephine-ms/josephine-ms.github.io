@@ -27,6 +27,15 @@ The ALS clustering analysis was reorganized for publication as a standalone data
 - PCA-based cluster visualization.
 - Original interpretation of weak cluster separation.
 
+
+## Google Colab compatibility update
+
+- Updated `notebooks/ALS_Patient_Clustering.ipynb` to load `data/raw/als_data.csv` from the local project when available, or automatically retrieve it from the public GitHub repository when running in Google Colab.
+- Standardized the notebook's internal Colab filename metadata to `ALS_Patient_Clustering.ipynb`.
+- Updated `README.md` with the direct Google Colab launch link and automatic dataset-loading instructions.
+- These changes remove the need to upload the CSV manually in a fresh Colab session when internet access is available.
+- Full end-to-end execution in a fresh Colab session remains to be verified.
+
 ## Validation and remaining checks
 
 - Notebook code cells previously passed Python syntax parsing.
