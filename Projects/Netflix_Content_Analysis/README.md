@@ -25,23 +25,20 @@ Exploratory data analysis of the Netflix titles catalog, focusing on content cat
 - The most frequent audience ratings include **TV-MA, TV-14**.
 - These are catalog counts, **not viewing popularity or engagement**.
 
-## Reproduce
-From this project's root directory:
+## Open the notebook in Google Colab
+[**Open Netflix Content Analysis notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Netflix_Content_Analysis/notebooks/Netflix_Content_Analysis.ipynb)
 
-```bash
-python -m pip install -r requirements.txt
-python scripts/Netflix_Content_Analysis.py
-```
+Select **Runtime → Run all**. The notebook retrieves `netflix_titles.csv` from the public GitHub repository if a local copy is unavailable (internet access required). Complete fresh-Colab execution has not yet been independently verified.
 
-Alternatively, open `notebooks/Netflix_Content_Analysis.ipynb` and run its cells from either the root or the `notebooks/` directory.
+## Run locally
+Install dependencies with `python -m pip install -r requirements.txt`, then open `notebooks/Netflix_Content_Analysis.ipynb` in Jupyter and run the cells.
 
 ## Project Structure
 - `notebooks/` — annotated analysis notebook
-- `scripts/` — executable Python analysis
 - `data/raw/` — original dataset
 - `data/processed/` — reserved for derived data
 - `outputs/` — reserved for generated figures
-- `PORTFOLIO_CLEANUP.md` — project-specific cleanup record
+- `CLEANUP_LOG.md` — project-specific cleanup record
 
 ## Limitations
 The dataset is a historical snapshot of catalog titles, not current availability or user behavior. The `listed_in` field contains Netflix categories rather than a standardized genre taxonomy. Missing values and occasional inconsistent rating entries should be considered when interpreting distributions.
