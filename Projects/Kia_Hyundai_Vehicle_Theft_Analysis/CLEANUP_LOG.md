@@ -1,4 +1,4 @@
-# Portfolio Cleanup — Kia and Hyundai Vehicle Theft Analysis
+# Portfolio Cleanup - Kia and Hyundai Vehicle Theft Analysis
 
 ## Scope
 Standardized the supplied R analysis and data files into a standalone portfolio project without academic submission packaging.
