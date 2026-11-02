@@ -16,6 +16,11 @@ The project uses four original Excel files under `data/raw/`:
 - `complaints-by-subcategory.xlsx`
 - `iata-icao.xlsx` (airport identifiers and location reference)
 
+## View the interactive dashboard online
+[**Open TSA Passenger Complaints Analysis in Tableau Public**](https://public.tableau.com/app/profile/josephine.jesuraj/viz/Week910assignment/TSAComplaintsAnalysis)
+
+This publicly shared Tableau Public view lets visitors explore the visualization in a browser without installing Tableau. The published workbook is titled `Week910assignment` in its current Tableau Public URL; the portfolio presentation uses the professional project title above.
+
 ## Dashboard and visualizations
 The Tableau workbook contains six worksheets and two dashboards, including:
 1. Top 50 airports by complaint count (bar chart)
@@ -28,7 +33,7 @@ The Tableau workbook contains six worksheets and two dashboards, including:
 ## Findings
 The original analysis identifies high complaint volumes at major hubs including LAX, JFK, EWR, ATL, and MCO. Prominent themes include expedited passenger screening, customer service, screening, and passenger property concerns. These are **raw complaint counts**, not rates adjusted for passenger traffic.
 
-## How to open
+## Open the editable workbook locally
 1. Install Tableau Desktop or a compatible Tableau authoring environment.
 2. Open `tableau/TSA_Passenger_Complaints_Analysis.twb`.
 3. If Tableau reports missing data sources, use **Data > Edit Connection** to point each Excel connection to the matching file in `data/raw/`.
