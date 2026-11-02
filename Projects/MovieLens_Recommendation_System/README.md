@@ -22,19 +22,18 @@ Recommendations are based on similarities between observed rating vectors, not m
 
 ## Repository contents
 - `notebooks/MovieLens_Recommendation_System.ipynb`: reproducible notebook with a noninteractive example
-- `scripts/MovieLens_Recommendation_System.py`: standalone runnable version
 - `data/raw/`: original MovieLens data and licensing notes
 - `data/processed/`: reserved for generated data
 - `outputs/`: reserved for exported results
-- `PORTFOLIO_CLEANUP.md`: project-specific cleanup record
+- `CLEANUP_LOG.md`: project-specific cleanup record
 
-## Run
-From the project folder:
-```bash
-python -m pip install -r requirements.txt
-python scripts/MovieLens_Recommendation_System.py
-```
-The script prints ten recommendations for *Toy Story*. You can also run the notebook from the project root or `notebooks/` directory.
+## Open the notebook in Google Colab
+[**Open MovieLens Recommendation System notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/MovieLens_Recommendation_System/notebooks/MovieLens_Recommendation_System.ipynb)
+
+Select **Runtime → Run all**. The notebook automatically loads `movies.csv` and `ratings.csv` from this repository when the files are not available locally (internet access required). The notebook provides a noninteractive *Toy Story* recommendation example. Complete fresh-Colab execution has not yet been independently verified.
+
+## Run locally
+Install dependencies with `python -m pip install -r requirements.txt`, then open `notebooks/MovieLens_Recommendation_System.ipynb` from Jupyter and run all cells.
 
 ## Limitations and responsible use
 Popularity bias, sparsity, cold-start limitations, and absence of offline validation mean this is a demonstration rather than a production-ready recommender. User identifiers are anonymized. MovieLens data are subject to the redistribution and noncommercial conditions in `data/raw/README.txt`; no endorsement by GroupLens or the University of Minnesota is implied.
