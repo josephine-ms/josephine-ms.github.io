@@ -1,4 +1,4 @@
-# MovieLens Recommendation System — Portfolio Cleanup
+# MovieLens Recommendation System - Portfolio Cleanup
 
 ## Original source
 `Josephine_jesuraj_DSC_630_Assignment_10.2.ipynb` and MovieLens `movies.csv`, `ratings.csv`, `tags.csv`, `links.csv`, `README.txt`.
