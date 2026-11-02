@@ -17,9 +17,9 @@ The project uses four original Excel files under `data/raw/`:
 - `iata-icao.xlsx` (airport identifiers and location reference)
 
 ## View the interactive dashboard online
-[**Open TSA Passenger Complaints Analysis in Tableau Public**](https://public.tableau.com/app/profile/josephine.jesuraj/viz/Week910assignment/TSAComplaintsAnalysis)
+[**Open TSA Passenger Complaints Analysis in Tableau Public**](https://public.tableau.com/app/profile/josephine.jesuraj/viz/TSAComplaintsAnalysis/TSAComplaintsAnalysis)
 
-This publicly shared Tableau Public view lets visitors explore the visualization in a browser without installing Tableau. The published workbook is titled `Week910assignment` in its current Tableau Public URL; the portfolio presentation uses the professional project title above.
+This publicly shared Tableau Public view lets visitors explore the visualization in a browser without installing Tableau. The published workbook now uses the professional Tableau Public URL and portfolio title.
 
 ## Dashboard and visualizations
 The Tableau workbook contains six worksheets and two dashboards, including:
