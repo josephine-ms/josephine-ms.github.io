@@ -24,21 +24,18 @@ The original analysis reports a fitted slope of approximately **873.05 sales uni
 
 ## Project structure
 - `notebooks/US_Retail_Sales_Forecasting.ipynb`: documented exploratory analysis.
-- `scripts/US_Retail_Sales_Forecasting.py`: equivalent standalone Python workflow.
 - `data/raw/us_retail_sales.csv`: original dataset.
 - `data/processed/`: reserved for transformed datasets.
 - `outputs/`: reserved for optional generated figures.
-- `PORTFOLIO_CLEANUP.md`: portfolio preparation record.
+- `CLEANUP_LOG.md`: project-specific portfolio preparation record.
 
-## How to run
-From the project root:
+## Open the notebook in Google Colab
+[**Open U.S. Retail Sales Forecasting notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/US_Retail_Sales_Forecasting/notebooks/US_Retail_Sales_Forecasting.ipynb)
 
-```bash
-python -m pip install -r requirements.txt
-python scripts/US_Retail_Sales_Forecasting.py
-```
+Open the link and select **Runtime → Run all**. The notebook automatically loads `us_retail_sales.csv` from this public GitHub repository if the CSV is not available locally (internet access required). Full fresh-Colab execution has not yet been independently verified.
 
-Alternatively, open the notebook and run the cells in order. Its data loader supports execution from either the project root or the `notebooks/` directory.
+## Run locally
+From the project root, install dependencies with `python -m pip install -r requirements.txt`. Then open `notebooks/US_Retail_Sales_Forecasting.ipynb` in Jupyter and run the cells in order. The notebook checks dataset paths relative to either the project root or the `notebooks/` folder.
 
 ## Limitations and future work
 A single linear time feature does not model seasonality, changing growth rates, or economic shocks. Compare seasonal-naive forecasts, SARIMA, and other models using rolling-origin evaluation before using forecasts for decisions. The source data ends in June 2021 and does not represent current retail conditions.
