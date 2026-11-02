@@ -32,7 +32,9 @@ The original analysis reports a fitted slope of approximately **873.05 sales uni
 ## Open the notebook in Google Colab
 [**Open U.S. Retail Sales Forecasting notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/US_Retail_Sales_Forecasting/notebooks/US_Retail_Sales_Forecasting.ipynb)
 
-Open the link and select **Runtime → Run all**. The notebook automatically loads `us_retail_sales.csv` from this public GitHub repository if the CSV is not available locally (internet access required). Full fresh-Colab execution has not yet been independently verified.
+Open the link and select **Runtime → Run all**. The notebook automatically loads `us_retail_sales.csv` from this public GitHub repository if the CSV is not available locally (internet access required).
+
+**If Colab displays `TypeError: Failed to fetch` while opening from GitHub:** use [Download the notebook from GitHub](https://github.com/josephine-ms/josephine-ms.github.io/raw/refs/heads/main/Projects/US_Retail_Sales_Forecasting/notebooks/US_Retail_Sales_Forecasting.ipynb), then open [Google Colab](https://colab.research.google.com/), choose **File → Upload notebook**, select the downloaded `.ipynb`, and run all cells. This local-upload route has been confirmed to work by the project owner. The direct GitHub-to-Colab import remains affected by a fetch error in the user's environment.
 
 ## Run locally
 From the project root, install dependencies with `python -m pip install -r requirements.txt`. Then open `notebooks/US_Retail_Sales_Forecasting.ipynb` in Jupyter and run the cells in order. The notebook checks dataset paths relative to either the project root or the `notebooks/` folder.
