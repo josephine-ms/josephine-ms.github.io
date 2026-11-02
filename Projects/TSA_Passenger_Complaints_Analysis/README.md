@@ -45,7 +45,7 @@ The original analysis identifies high complaint volumes at major hubs including 
 - `tableau/` — editable Tableau workbook
 - `data/raw/` — four source datasets
 - `outputs/` — optional exported dashboard images
-- `PORTFOLIO_CLEANUP.md` — project-specific standardization record
+- `CLEANUP_LOG.md` — project-specific standardization record
 
 ## Tools
 Tableau Desktop and Excel data sources. No Python notebook, Python script, or `requirements.txt` is needed for this Tableau-native project.
