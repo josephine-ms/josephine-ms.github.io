@@ -1,5 +1,7 @@
 # ALS Patient Clustering Analysis
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/ALS_Patient_Clustering/notebooks/ALS_Patient_Clustering.ipynb)
+
 ## Overview
 Explore whether anonymized ALS patient observations form distinct groups using unsupervised learning. This is an exploratory analysis, not a clinical diagnostic tool.
 
