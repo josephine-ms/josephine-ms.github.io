@@ -36,6 +36,8 @@ rmarkdown::render("notebooks/Kia_Hyundai_Vehicle_Theft_Analysis.Rmd", output_dir
 
 Or run `source("scripts/Kia_Hyundai_Vehicle_Theft_Analysis.R")` from the project root. R Markdown generates an HTML report rather than a submission PDF.
 
+**Execution environment:** This is an R/R Markdown project, so it is intended for RStudio rather than a Python Google Colab notebook. Keep the project root as the working directory so the relative dataset paths resolve correctly. For cleanup and reproducibility notes, see [CLEANUP_LOG.md](CLEANUP_LOG.md).
+
 ## Interpretation and Limitations
 The charts summarize the provided data, not a complete census of all vehicle thefts. City-level counts should not be interpreted as per-capita risk without population and reporting adjustments. Trends may reflect differences in coverage, reporting, and data completeness. The analysis is descriptive, not causal; it does not establish why thefts occurred or whether any specific security measure caused changes.
 
