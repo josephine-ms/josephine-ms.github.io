@@ -1,0 +1,12 @@
+R packages (install using install.packages):
+readr
+readxl
+dplyr
+tidyr
+ggplot2
+lubridate
+treemapify
+scales
+stringr
+knitr
+rmarkdown
