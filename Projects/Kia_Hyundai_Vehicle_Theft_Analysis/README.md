@@ -25,7 +25,7 @@ The R workflow parses date and numeric fields, reshapes wide Excel data to long 
 - `data/raw/` — original four input datasets
 - `data/processed/` — reserved for optional derived data
 - `outputs/` — reserved for exported visualizations
-- `PORTFOLIO_CLEANUP.md` — project-specific cleanup record
+- `CLEANUP_LOG.md` — project-specific cleanup record
 
 ## Reproduce
 Install R and the packages listed in `requirements.txt`. Open the project root as the RStudio working directory, then run:
