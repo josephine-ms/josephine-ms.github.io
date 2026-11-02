@@ -1,4 +1,4 @@
-# Netflix Content and Genre Analysis — Portfolio Cleanup
+# Netflix Content and Genre Analysis - Portfolio Cleanup
 
 ## Source Files
 - Original notebook: `Josephine_jesuraj_DSC_630_Assignment_1.2.ipynb`
