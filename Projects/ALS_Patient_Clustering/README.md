@@ -21,19 +21,17 @@ The original analysis reports its highest silhouette score near **0.078** for **
 
 ## Files
 - `notebooks/ALS_Patient_Clustering.ipynb` — interactive analysis with explanations
-- `scripts/ALS_Patient_Clustering.py` — standalone analysis
 - `data/raw/als_data.csv` — original input data
 - `data/processed/` — reserved for derived data
 - `outputs/` — reserved for generated visualizations
 - `requirements.txt` — dependencies
 
 ## Run
-From the project directory:
+Install dependencies from the project directory:
 ```bash
 python -m pip install -r requirements.txt
-python scripts/ALS_Patient_Clustering.py
 ```
-Or open the notebook and run all cells. Its data loader supports execution from either the project root or the `notebooks` folder.
+Open `notebooks/ALS_Patient_Clustering.ipynb` in Jupyter or Google Colab and run the cells in order. When running in Colab, upload the CSV or make the repository's `data/raw/als_data.csv` available at the expected relative path. The local notebook data loader supports execution from either the project root or the `notebooks` folder.
 
 ## Limitations and Ethics
 K-means is sensitive to scaling and assumes distance-based group structure. Low silhouette scores suggest substantial overlap. Anonymized patient data still require responsible handling. No clinical decisions should rely on these clusters without independent validation.
