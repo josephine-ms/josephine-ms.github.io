@@ -1,4 +1,4 @@
-# Portfolio Cleanup — U.S. Retail Sales Forecasting
+# Portfolio Cleanup - U.S. Retail Sales Forecasting
 
 ## Naming and organization
 - Renamed the original course/assignment notebook to `US_Retail_Sales_Forecasting.ipynb`.
