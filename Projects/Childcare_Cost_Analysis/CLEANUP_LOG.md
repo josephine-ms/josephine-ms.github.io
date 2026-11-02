@@ -1,4 +1,4 @@
-# Childcare Cost and Affordability Analysis — Portfolio Cleanup
+# Childcare Cost and Affordability Analysis - Portfolio Cleanup
 
 ## Source Materials
 - Original notebook: `Josephine_jesuraj_DSC_640_Project_Milestone5.ipynb`

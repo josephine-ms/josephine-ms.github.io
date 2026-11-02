@@ -1,4 +1,4 @@
-# ALS Patient Clustering — Portfolio Cleanup Log
+# ALS Patient Clustering - Portfolio Cleanup Log
 
 ## Project organization
 

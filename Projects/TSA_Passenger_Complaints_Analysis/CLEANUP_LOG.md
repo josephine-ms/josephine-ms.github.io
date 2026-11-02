@@ -1,4 +1,4 @@
-# Portfolio Cleanup — TSA Passenger Complaints Analysis
+# Portfolio Cleanup - TSA Passenger Complaints Analysis
 
 ## Original materials reviewed
 - `Week 9&10 assignment.twb` — Tableau workbook
