@@ -8,7 +8,7 @@ The ALS clustering analysis was reorganized for publication as a standalone data
 
 - Standardized project folder: `ALS_Patient_Clustering/`.
 - Standardized notebook: `notebooks/ALS_Patient_Clustering.ipynb`.
-- Created corresponding script: `scripts/ALS_Patient_Clustering.py`.
+- Removed the redundant standalone script `scripts/ALS_Patient_Clustering.py` to keep the notebook as the single executable analysis.
 - Replaced academic assignment framing in the notebook introduction with a project overview.
 - Added `README.md` describing the research question, dataset, approach, results, limitations, and execution instructions.
 - Added `requirements.txt` for Python dependencies.
@@ -29,8 +29,8 @@ The ALS clustering analysis was reorganized for publication as a standalone data
 
 ## Validation and remaining checks
 
-- Notebook code cells and standalone Python script passed Python syntax parsing.
-- Full execution of the notebook and script has **not** been verified in a clean environment.
+- Notebook code cells previously passed Python syntax parsing.
+- Full execution of the notebook has **not** been verified in a clean environment.
 - Review dataset publication permissions and confirm no sensitive information is included before publishing.
 
 ## Publishing location
