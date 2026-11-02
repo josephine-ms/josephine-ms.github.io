@@ -1,7 +1,7 @@
 # Superstore Sales and Business Performance Analysis
 
 ## Project overview
-This project examines **9,994 retail order line items** to understand sales, profitability, and performance differences across categories, customer segments, regions, and time. The objective is to turn descriptive retail data into business-relevant findings while preserving the original exploratory notebook and a simpler, reproducible Python analysis.
+This project examines **9,994 retail order line items** to understand sales, profitability, and performance differences across categories, customer segments, regions, and time. The objective is to turn descriptive retail data into business-relevant findings while preserving a documented exploratory notebook and reproducible analytical outputs.
 
 ## Business problem
 Strong revenue does not necessarily imply strong profit. A retailer needs to identify where sales generate losses, which product categories contribute profit, and which regions deserve closer investigation.
@@ -24,7 +24,7 @@ Strong revenue does not necessarily imply strong profit. A retailer needs to ide
 ## Tools and methods
 Python, pandas, Matplotlib, Jupyter Notebook, and the additional packages listed in `requirements.txt`.
 
-The verified standalone script reads the original CSV, validates required columns and order dates, calculates portfolio KPIs, aggregates category/region/segment performance, creates monthly summaries, and saves charts and tables. The preserved notebook contains broader exploratory, statistical, and modeling work; results from those additional sections are not presented as independently verified here.
+The historical project generated summary KPIs, category/region/segment aggregates, and charts. The preserved notebook contains broader exploratory, statistical, and modeling work; results from those sections have not been independently revalidated.
 
 ## Key findings
 | Measure | Result |
@@ -48,17 +48,8 @@ These findings come from the supplied historical sample. They indicate where to 
 - [Segment breakdown](outputs/sales_profit_by_segment.csv)
 - [Monthly sales and profit](outputs/monthly_sales_profit.csv)
 
-## How to run from GitHub on a computer
-Prerequisites: Python and Git. Run from a terminal:
-
-```bash
-git clone https://github.com/josephine-ms/josephine-ms.github.io.git
-cd josephine-ms.github.io/Projects/Superstore_Sales
-python -m pip install -r requirements.txt
-python scripts/Superstore_Sales.py
-```
-
-The script reads `data/raw/Superstore.csv` relative to the project directory and writes outputs to `outputs/`. It was successfully executed against the supplied dataset during portfolio preparation.
+## Run locally
+Install dependencies with `python -m pip install -r requirements.txt`, then open `notebooks/Superstore_Sales.ipynb` in Jupyter and run the cells. Some dataset paths may require adjustment to the reorganized folders.
 
 ## Open the original notebook in Google Colab
 [**Open Superstore notebook in Colab**](https://colab.research.google.com/github/josephine-ms/josephine-ms.github.io/blob/main/Projects/Superstore_Sales/notebooks/Superstore_Sales.ipynb)
@@ -72,15 +63,14 @@ For local Jupyter, launch `python -m notebook` from this project directory and o
 - `data/raw/`: original Superstore CSV
 - `data/processed/`: three prepared and encoded CSVs
 - `notebooks/`: original exploratory notebook
-- `scripts/`: reproducible standalone analysis
 - `outputs/`: saved figures and summary tables
 - `requirements.txt`: dependencies
-- **Notebook compatibility files:** the three prepared CSVs have been moved to `data/processed/`. The original notebook has not yet been fully migrated to these new paths; its full Run all is **not verified**. Use the standalone script for the verified entry point.
+- **Notebook compatibility files:** three prepared CSVs are stored in `data/processed/`. The notebook's full Run all is **not verified**, and its paths may need further adjustments.
 
 ## Limitations and responsible interpretation
 This is a historical sample dataset rather than live retail data. Line-item losses do not establish that discounting caused the loss. Findings should be interpreted alongside costs, product strategy, and current operational context before making decisions.
 
 ## Reproducibility status
-- **Standalone Python script:** executed successfully with the included dataset.
+- **Historical output verification:** existing outputs were generated using a prior standalone workflow; that redundant script is no longer retained.
 - **Original exploratory notebook:** preserved; complete fresh-environment Run all remains unverified.
-- **Cleanup and file provenance:** see the single [portfolio cleanup log](../../PORTFOLIO_CLEANUP.md).
+- **Cleanup and file provenance:** see this project's [cleanup log](CLEANUP_LOG.md).
